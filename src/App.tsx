@@ -4,10 +4,11 @@
  */
 
 import { useState } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import ErrorBoundary from './components/ErrorBoundary';
 
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
@@ -52,90 +53,92 @@ export default function App() {
   };
 
   return (
-    <BrowserRouter>
-      <ScrollToTop />
-      <div className="min-h-screen bg-[#f8faff] text-gray-900 flex flex-col font-sans selection:bg-[#d4af37] selection:text-white">
-        {/* Top Navbar */}
-        <Navbar onRegisterClick={handleOpenRegister} />
+    <ErrorBoundary>
+      <HashRouter>
+        <ScrollToTop />
+        <div className="min-h-screen bg-[#f8faff] text-gray-900 flex flex-col font-sans selection:bg-[#d4af37] selection:text-white">
+          {/* Top Navbar */}
+          <Navbar onRegisterClick={handleOpenRegister} />
 
-        {/* Dynamic Route Pages */}
-        <main className="flex-1">
-          <Routes>
-            <Route 
-              path="/" 
-              element={
-                <HomePage 
-                  onRegisterClick={handleOpenRegister}
-                  onOpenMap={handleOpenMap}
-                  onPhotoClick={handlePhotoClick}
-                />
-              } 
-            />
-            <Route 
-              path="/about" 
-              element={<AboutPage onRegisterClick={handleOpenRegister} />} 
-            />
-            <Route 
-              path="/schedule" 
-              element={<SchedulePage />} 
-            />
-            <Route 
-              path="/venue" 
-              element={<VenuePage />} 
-            />
-            <Route 
-              path="/ministers" 
-              element={<SpeakersPage />} 
-            />
-            <Route 
-              path="/speakers" 
-              element={<Navigate to="/ministers" replace />} 
-            />
-            <Route 
-              path="/gallery" 
-              element={<GalleryPage onPhotoClick={handlePhotoClick} />} 
-            />
-            <Route 
-              path="/register" 
-              element={<RegisterPage />} 
-            />
-            <Route 
-              path="/contact" 
-              element={<ContactFAQPage />} 
-            />
-            <Route 
-              path="/faq" 
-              element={<Navigate to="/contact" replace />} 
-            />
-            <Route 
-              path="*" 
-              element={<Navigate to="/" replace />} 
-            />
-          </Routes>
-        </main>
+          {/* Dynamic Route Pages */}
+          <main className="flex-1">
+            <Routes>
+              <Route 
+                path="/" 
+                element={
+                  <HomePage 
+                    onRegisterClick={handleOpenRegister}
+                    onOpenMap={handleOpenMap}
+                    onPhotoClick={handlePhotoClick}
+                  />
+                } 
+              />
+              <Route 
+                path="/about" 
+                element={<AboutPage onRegisterClick={handleOpenRegister} />} 
+              />
+              <Route 
+                path="/schedule" 
+                element={<SchedulePage />} 
+              />
+              <Route 
+                path="/venue" 
+                element={<VenuePage />} 
+              />
+              <Route 
+                path="/ministers" 
+                element={<SpeakersPage />} 
+              />
+              <Route 
+                path="/speakers" 
+                element={<Navigate to="/ministers" replace />} 
+              />
+              <Route 
+                path="/gallery" 
+                element={<GalleryPage onPhotoClick={handlePhotoClick} />} 
+              />
+              <Route 
+                path="/register" 
+                element={<RegisterPage />} 
+              />
+              <Route 
+                path="/contact" 
+                element={<ContactFAQPage />} 
+              />
+              <Route 
+                path="/faq" 
+                element={<Navigate to="/contact" replace />} 
+              />
+              <Route 
+                path="*" 
+                element={<Navigate to="/" replace />} 
+              />
+            </Routes>
+          </main>
 
-        {/* Global Footer */}
-        <Footer onRegisterClick={handleOpenRegister} />
+          {/* Global Footer */}
+          <Footer onRegisterClick={handleOpenRegister} />
 
-        {/* Interactive Global Registration Modal */}
-        <RegistrationModal 
-          isOpen={isRegisterModalOpen} 
-          onClose={handleCloseRegister} 
-        />
+          {/* Interactive Global Registration Modal */}
+          <RegistrationModal 
+            isOpen={isRegisterModalOpen} 
+            onClose={handleCloseRegister} 
+          />
 
-        {/* Interactive Location & Directions Modal */}
-        <LocationModal 
-          isOpen={isMapModalOpen} 
-          onClose={handleCloseMap} 
-        />
+          {/* Interactive Location & Directions Modal */}
+          <LocationModal 
+            isOpen={isMapModalOpen} 
+            onClose={handleCloseMap} 
+          />
 
-        {/* Photo Lightbox Modal */}
-        <GalleryModal
-          activePhotoId={activeGalleryPhotoId}
-          onClose={handleCloseGallery}
-          onSelectPhoto={handlePhotoClick}
-        />
-      </div>
-    </BrowserRouter>
+          {/* Photo Lightbox Modal */}
+          <GalleryModal
+            activePhotoId={activeGalleryPhotoId}
+            onClose={handleCloseGallery}
+            onSelectPhoto={handlePhotoClick}
+          />
+        </div>
+      </HashRouter>
+    </ErrorBoundary>
   );
 }
