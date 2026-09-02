@@ -111,9 +111,8 @@ export default function Navbar({ onRegisterClick }: NavbarProps) {
             
             <button 
               onClick={onRegisterClick}
-              className="bg-gradient-to-r from-[#d4af37] via-[#f7e49e] to-[#c59b27] hover:from-[#e5c158] hover:via-[#fcf0b8] hover:to-[#d4af37] text-[#00133a] font-black text-xs uppercase tracking-wider px-5 py-2.5 rounded-full transition-all transform hover:scale-105 shadow-md shadow-[#d4af37]/30 cursor-pointer flex items-center gap-1.5 whitespace-nowrap"
+              className="bg-gradient-to-r from-[#d4af37] via-[#f7e49e] to-[#c59b27] hover:from-[#e5c158] hover:via-[#fcf0b8] hover:to-[#d4af37] text-[#00133a] font-black text-xs uppercase tracking-wider px-5 py-2.5 rounded-full transition-all transform hover:scale-105 shadow-md shadow-[#d4af37]/30 cursor-pointer flex items-center justify-center whitespace-nowrap"
             >
-              <Sparkles className="w-3.5 h-3.5" />
               <span>Register Free</span>
             </button>
           </div>
@@ -205,9 +204,8 @@ export default function Navbar({ onRegisterClick }: NavbarProps) {
                   setIsMobileMenuOpen(false);
                   onRegisterClick();
                 }}
-                className="w-full bg-gradient-to-r from-[#d4af37] via-[#f7e49e] to-[#c59b27] text-[#00133a] py-3.5 rounded-xl font-black text-sm shadow-lg shadow-[#d4af37]/20 cursor-pointer flex items-center justify-center gap-2"
+                className="w-full bg-gradient-to-r from-[#d4af37] via-[#f7e49e] to-[#c59b27] text-[#00133a] py-3.5 rounded-xl font-black text-sm shadow-lg shadow-[#d4af37]/20 cursor-pointer flex items-center justify-center"
               >
-                <Sparkles className="w-4 h-4" />
                 <span>Register for December Edition</span>
               </button>
             </div>

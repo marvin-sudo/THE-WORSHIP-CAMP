@@ -99,7 +99,7 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
                       : 'text-white/80 hover:text-white'
                   }`}
                 >
-                  <Sparkles className="w-3.5 h-3.5" />
+                  <QrCode className="w-3.5 h-3.5" />
                   <span>Instant Badge</span>
                 </button>
                 <button

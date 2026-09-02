@@ -116,8 +116,8 @@ export default function VenuePage() {
                 to="/register" 
                 className="w-full bg-gradient-to-r from-[#d4af37] via-[#f7e49e] to-[#c59b27] hover:from-[#e5c158] hover:via-[#fcf0b8] hover:to-[#d4af37] text-[#00133a] font-black py-3.5 rounded-2xl text-sm flex items-center justify-center gap-2 shadow-lg shadow-[#d4af37]/20 transition-transform hover:scale-[1.02] cursor-pointer"
               >
-                <Sparkles className="w-4 h-4" />
                 <span>Register to Secure Entrance</span>
+                <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>

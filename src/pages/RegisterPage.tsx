@@ -132,7 +132,7 @@ export default function RegisterPage() {
                     : 'text-gray-600 hover:text-[#002366]'
                 }`}
               >
-                <Sparkles className="w-4 h-4 text-[#d4af37]" />
+                <QrCode className="w-4 h-4 text-[#d4af37]" />
                 <span>Instant Digital Badge</span>
               </button>
 
@@ -315,7 +315,7 @@ export default function RegisterPage() {
                         type="submit"
                         className="w-full bg-gradient-to-r from-[#d4af37] via-[#f7e49e] to-[#c59b27] hover:from-[#e5c158] hover:via-[#fcf0b8] hover:to-[#d4af37] text-[#00133a] font-black py-4 rounded-2xl text-base shadow-xl shadow-[#d4af37]/20 flex items-center justify-center gap-2 cursor-pointer transition-all hover:scale-[1.01]"
                       >
-                        <Sparkles className="w-5 h-5" />
+                        <QrCode className="w-5 h-5" />
                         <span>Complete Free Registration & Get Badge</span>
                       </button>
                       <p className="text-center text-[11px] text-gray-400 mt-3">
@@ -446,7 +446,7 @@ export default function RegisterPage() {
                     onClick={handleCopyFormLink}
                     className="px-3.5 py-2 rounded-xl bg-white border border-gray-200 text-xs font-bold text-gray-700 hover:bg-gray-50 transition-all flex items-center gap-1.5 cursor-pointer shadow-sm"
                   >
-                    {copiedLink ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Sparkles className="w-3.5 h-3.5 text-[#d4af37]" />}
+                    {copiedLink ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <FileText className="w-3.5 h-3.5 text-[#002366]" />}
                     <span>{copiedLink ? 'Link Copied!' : 'Copy Form Link'}</span>
                   </button>
 
