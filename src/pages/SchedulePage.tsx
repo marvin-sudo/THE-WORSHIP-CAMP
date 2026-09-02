@@ -7,13 +7,13 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import PageHeader from '../components/PageHeader';
-import { EVENT_INFO } from '../constants';
-import { Clock, Calendar, MapPin, Sparkles, Filter, Download, ArrowRight, Music, Flame, BookOpen, Users, CheckCircle } from 'lucide-react';
+import { EVENT_INFO, EDITIONS } from '../constants';
+import { Clock, Calendar, MapPin, Sparkles, Filter, Download, ArrowRight, Music, Flame, BookOpen, Users, CheckCircle, History, Check } from 'lucide-react';
 
 const DETAILED_SESSIONS = [
   {
-    phase: "Phase 1",
-    phaseTitle: "Gates Open & Worship Atmosphere",
+    sessionBlock: "Session 1",
+    sessionLabel: "Afternoon Flow",
     time: "03:00 PM - 04:00 PM",
     title: "Gates Open, Pass Verification & Acoustic Praise Prelude",
     type: "Arrival & Atmosphere",
@@ -24,8 +24,8 @@ const DETAILED_SESSIONS = [
     highlights: ["Express QR Badge Scanning", "Acoustic prelude & prayer walk", "Free program guide distribution"]
   },
   {
-    phase: "Phase 1",
-    phaseTitle: "Gates Open & Worship Atmosphere",
+    sessionBlock: "Session 1",
+    sessionLabel: "Afternoon Flow",
     time: "04:00 PM - 05:15 PM",
     title: "Grand Opening: Praise Explosion & Holy Spirit Invocation",
     type: "Praise & Worship",
@@ -36,8 +36,8 @@ const DETAILED_SESSIONS = [
     highlights: ["Spontaneous prophetic praise", "Corporate declaration of faith", "Atmosphere shift"]
   },
   {
-    phase: "Phase 1",
-    phaseTitle: "Gates Open & Worship Atmosphere",
+    sessionBlock: "Session 1",
+    sessionLabel: "Afternoon Flow",
     time: "05:15 PM - 06:30 PM",
     title: "Keynote Teaching: 'Awakening the Altar of Devotion'",
     type: "Biblical Exhortation",
@@ -48,8 +48,8 @@ const DETAILED_SESSIONS = [
     highlights: ["Deep scriptural revelation", "Q&A insights", "Actionable spiritual disciplines"]
   },
   {
-    phase: "Phase 2",
-    phaseTitle: "Deep Encounters & Prophetic Ministry",
+    sessionBlock: "Session 2",
+    sessionLabel: "Evening Encounter",
     time: "06:30 PM - 07:45 PM",
     title: "Extended Altar Ministry, Healing & Personal Breakthrough",
     type: "Revival & Prayer",
@@ -60,8 +60,8 @@ const DETAILED_SESSIONS = [
     highlights: ["Laying on of hands", "Personal intercession altars", "Healing & emotional restoration"]
   },
   {
-    phase: "Phase 2",
-    phaseTitle: "Deep Encounters & Prophetic Ministry",
+    sessionBlock: "Session 2",
+    sessionLabel: "Evening Encounter",
     time: "07:45 PM - 08:30 PM",
     title: "Kingdom Fellowship & Refreshment Intermission",
     type: "Community & Breakouts",
@@ -72,8 +72,8 @@ const DETAILED_SESSIONS = [
     highlights: ["Warm tea & refreshments", "Choir & youth team networking", "Testimony sharing station"]
   },
   {
-    phase: "Phase 2",
-    phaseTitle: "Deep Encounters & Prophetic Ministry",
+    sessionBlock: "Session 2",
+    sessionLabel: "Evening Encounter",
     time: "08:30 PM - 10:15 PM",
     title: "Night of Unrestrained Garden Worship Under Open Skies",
     type: "Continuous Worship",
@@ -84,8 +84,8 @@ const DETAILED_SESSIONS = [
     highlights: ["Open-sky acoustic worship", "Communion service", "Celestial choir harmony"]
   },
   {
-    phase: "Phase 2",
-    phaseTitle: "Deep Encounters & Prophetic Ministry",
+    sessionBlock: "Session 2",
+    sessionLabel: "Evening Encounter",
     time: "10:15 PM - 10:45 PM",
     title: "Anointing Impartation, Benediction & Commissioning",
     type: "Commissioning",
@@ -98,41 +98,124 @@ const DETAILED_SESSIONS = [
 ];
 
 export default function SchedulePage() {
+  const [selectedEdition, setSelectedEdition] = useState<string>("edition-2");
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
-  const [activePhaseFilter, setActivePhaseFilter] = useState<string>("All");
+  const [activeSessionFilter, setActiveSessionFilter] = useState<string>("All");
 
   const categories = ["All", "Worship", "Word", "Ministry", "Fellowship", "Arrival"];
 
   const filteredSessions = DETAILED_SESSIONS.filter((session) => {
     const matchesCategory = selectedCategory === "All" || session.category === selectedCategory;
-    const matchesPhase = activePhaseFilter === "All" || session.phase === activePhaseFilter;
-    return matchesCategory && matchesPhase;
+    const matchesSession = activeSessionFilter === "All" || session.sessionBlock === activeSessionFilter;
+    return matchesCategory && matchesSession;
   });
 
   const generateGoogleCalendarUrl = () => {
-    const title = encodeURIComponent("Worship Camp: December Edition");
-    const details = encodeURIComponent("Join us for Worship Camp December Edition at Maisha Gardens starting 4:00 PM EAT. Bring your Bible, journal, and warm attire.");
+    const title = encodeURIComponent("Worship Camp: Edition 2 (December Edition)");
+    const details = encodeURIComponent("Join us for Worship Camp Edition 2 (December Edition) at Maisha Gardens starting 4:00 PM EAT. Bring your Bible, journal, and warm attire.");
     const location = encodeURIComponent(EVENT_INFO.locationAddress);
     const dates = "20261201T130000Z/20261201T200000Z";
     return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${dates}&details=${details}&location=${location}`;
   };
 
   const handleDownloadProgram = () => {
-    alert("Worship Camp 2026: December Edition Schedule (PDF format) will download to your device.");
+    alert("Worship Camp 2026: Edition 2 (December Edition) Schedule (PDF format) will download to your device.");
   };
 
   return (
     <div className="bg-[#f8faff] min-h-screen">
       {/* 1. Page Header */}
       <PageHeader 
-        badge="December Edition Flow"
-        title="Event Program & Schedule"
-        subtitle="Tuesday, 1st December 2026 • Maisha Gardens • Gates Open 3:00 PM • Main Session Starts 4:00 PM EAT"
+        badge="Worship Camp Editions"
+        title="Event Program & Editions Flow"
+        subtitle="1st Edition: September 2026 (Completed) • 2nd Edition: 1st December 2026 @ Maisha Gardens"
         breadcrumb="Schedule"
       />
 
-      {/* 2. Top Summary & Calendar Action Bar */}
-      <section className="py-8 bg-white border-b border-gray-100 shadow-sm sticky top-16 z-30">
+      {/* 2. Editions Showcase Selector Banner */}
+      <section className="py-10 bg-white border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+            <div>
+              <span className="text-[#d4af37] font-bold text-xs uppercase tracking-widest flex items-center gap-1.5 mb-1">
+                <History className="w-3.5 h-3.5" /> Worship Camp Editions Timeline
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-display font-bold text-[#002366]">
+                Explore Our Gatherings
+              </h2>
+            </div>
+            <p className="text-gray-500 text-xs sm:text-sm max-w-md">
+              From our 1st Edition in September to our grand upcoming 2nd Edition on 1st December 2026 at Maisha Gardens.
+            </p>
+          </div>
+
+          {/* Editions Cards Grid */}
+          <div className="grid md:grid-cols-2 gap-6">
+            {EDITIONS.map((ed) => {
+              const isSelected = selectedEdition === ed.id;
+              const isUpcoming = ed.status === "Upcoming";
+              return (
+                <div
+                  key={ed.id}
+                  onClick={() => setSelectedEdition(ed.id)}
+                  className={`p-6 sm:p-8 rounded-3xl transition-all cursor-pointer border relative overflow-hidden ${
+                    isSelected
+                      ? 'bg-[#002366] text-white border-[#002366] shadow-xl shadow-[#002366]/15'
+                      : 'bg-[#f8faff] text-gray-800 border-gray-200/80 hover:border-blue-200 hover:bg-white shadow-sm'
+                  }`}
+                >
+                  <div className="flex items-center justify-between gap-3 mb-4">
+                    <span 
+                      className={`text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full ${
+                        isSelected 
+                          ? 'bg-[#d4af37] text-[#00133a]' 
+                          : isUpcoming 
+                            ? 'bg-blue-100 text-[#002366]' 
+                            : 'bg-gray-200 text-gray-700'
+                      }`}
+                    >
+                      {ed.badge}
+                    </span>
+                    <span 
+                      className={`text-xs font-mono font-bold ${
+                        isSelected ? 'text-[#f3e5ab]' : 'text-gray-500'
+                      }`}
+                    >
+                      {ed.date}
+                    </span>
+                  </div>
+
+                  <h3 className="text-xl sm:text-2xl font-display font-bold mb-2">
+                    {ed.title}
+                  </h3>
+                  <p className={`text-xs sm:text-sm mb-4 leading-relaxed ${isSelected ? 'text-blue-100/80' : 'text-gray-600'}`}>
+                    {ed.description}
+                  </p>
+
+                  <div className="space-y-1.5 pt-3 border-t border-white/10">
+                    {ed.highlights.map((h) => (
+                      <div key={h} className="flex items-center gap-2 text-xs">
+                        <Check className={`w-3.5 h-3.5 shrink-0 ${isSelected ? 'text-[#d4af37]' : 'text-[#002366]'}`} />
+                        <span className={isSelected ? 'text-white/90' : 'text-gray-700'}>{h}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {isUpcoming && isSelected && (
+                    <div className="mt-4 pt-3 flex items-center gap-2 text-xs font-bold text-[#f3e5ab]">
+                      <Sparkles className="w-3.5 h-3.5 text-[#d4af37]" />
+                      <span>Viewing Detailed Program Below</span>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Top Summary & Calendar Action Bar */}
+      <section className="py-6 bg-white border-b border-gray-100 shadow-sm sticky top-16 z-30">
         <div className="max-w-7xl mx-auto px-6 flex flex-wrap items-center justify-between gap-4">
           
           {/* Quick Date Pill */}
@@ -141,8 +224,8 @@ export default function SchedulePage() {
               <Calendar className="w-4 h-4" />
             </div>
             <div>
-              <p className="font-extrabold text-sm">{EVENT_INFO.dateDetail}</p>
-              <p className="text-gray-500 text-[11px]">7+ Hours of Non-Stop Impartation</p>
+              <p className="font-extrabold text-sm">Edition 2: {EVENT_INFO.dateDetail}</p>
+              <p className="text-gray-500 text-[11px]">7+ Hours of Non-Stop Impartation @ Maisha Gardens</p>
             </div>
           </div>
 
@@ -170,42 +253,42 @@ export default function SchedulePage() {
         </div>
       </section>
 
-      {/* 3. Filters & Phase Selector */}
+      {/* 4. Filters & Session Selector */}
       <section className="py-10 max-w-7xl mx-auto px-6">
         
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-10 pb-6 border-b border-gray-200">
           
-          {/* Phase Filter Tabs */}
+          {/* Session Filter Tabs */}
           <div className="flex items-center gap-2 bg-gray-100 p-1.5 rounded-2xl">
             <button
-              onClick={() => setActivePhaseFilter("All")}
+              onClick={() => setActiveSessionFilter("All")}
               className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
-                activePhaseFilter === "All"
+                activeSessionFilter === "All"
                   ? "bg-[#002366] text-white shadow-md"
                   : "text-gray-600 hover:text-gray-900"
               }`}
             >
-              All Phases
+              All Sessions
             </button>
             <button
-              onClick={() => setActivePhaseFilter("Phase 1")}
+              onClick={() => setActiveSessionFilter("Session 1")}
               className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
-                activePhaseFilter === "Phase 1"
+                activeSessionFilter === "Session 1"
                   ? "bg-[#002366] text-white shadow-md"
                   : "text-gray-600 hover:text-gray-900"
               }`}
             >
-              Phase 1 (3PM - 6:30PM)
+              Session 1 (3PM - 6:30PM)
             </button>
             <button
-              onClick={() => setActivePhaseFilter("Phase 2")}
+              onClick={() => setActiveSessionFilter("Session 2")}
               className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
-                activePhaseFilter === "Phase 2"
+                activeSessionFilter === "Session 2"
                   ? "bg-[#002366] text-white shadow-md"
                   : "text-gray-600 hover:text-gray-900"
               }`}
             >
-              Phase 2 (6:30PM - 10:45PM)
+              Session 2 (6:30PM - 10:45PM)
             </button>
           </div>
 
@@ -231,7 +314,7 @@ export default function SchedulePage() {
 
         </div>
 
-        {/* 4. Timeline Cards List */}
+        {/* 5. Timeline Cards List */}
         <div className="space-y-6">
           <AnimatePresence mode="popLayout">
             {filteredSessions.map((session, idx) => (
@@ -246,11 +329,11 @@ export default function SchedulePage() {
               >
                 <div className="grid lg:grid-cols-12 gap-6 items-start">
                   
-                  {/* Time & Phase Badge Column */}
+                  {/* Time & Session Badge Column */}
                   <div className="lg:col-span-3 space-y-2">
                     <div className="inline-flex items-center gap-1.5 bg-[#002366]/5 text-[#002366] text-[11px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full">
                       <Sparkles className="w-3 h-3 text-[#d4af37]" />
-                      {session.phase}
+                      {session.sessionBlock} • {session.sessionLabel}
                     </div>
                     
                     <div className="flex items-center gap-2 text-lg sm:text-xl font-mono font-black text-[#002366]">
@@ -321,11 +404,11 @@ export default function SchedulePage() {
 
       </section>
 
-      {/* 5. What to Bring & Prepare Strip */}
+      {/* 6. What to Bring & Prepare Strip */}
       <section className="py-16 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h3 className="text-2xl font-display font-bold text-[#002366] mb-3">
-            Preparing for the Full Experience
+            Preparing for Edition 2 at Maisha Gardens
           </h3>
           <p className="text-gray-600 text-sm max-w-2xl mx-auto mb-8">
             Gates open at 3:00 PM for acoustic prelude & free check-in. Please arrive on time to secure optimal lawn seating.
@@ -336,7 +419,7 @@ export default function SchedulePage() {
               to="/register" 
               className="bg-gradient-to-r from-[#d4af37] via-[#f7e49e] to-[#c59b27] hover:from-[#e5c158] hover:via-[#fcf0b8] hover:to-[#d4af37] text-[#00133a] font-black px-8 py-3.5 rounded-full text-sm inline-flex items-center gap-2 shadow-lg shadow-[#d4af37]/20 transition-transform hover:scale-105"
             >
-              <span>Register Free Now</span>
+              <span>Register Free for Edition 2</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link 

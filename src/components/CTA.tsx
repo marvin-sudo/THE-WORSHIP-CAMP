@@ -25,7 +25,7 @@ export default function CTA({ onRegisterClick }: CTAProps) {
 
         <div className="relative z-10 max-w-4xl mx-auto">
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-[#f3e5ab] text-xs font-bold uppercase tracking-widest mb-6 border border-white/15">
-            <Sparkles className="w-3.5 h-3.5 text-[#d4af37]" /> DECEMBER EDITION REGISTRATION IS OPEN
+            <Sparkles className="w-3.5 h-3.5 text-[#d4af37]" /> EDITION 2 (DECEMBER 2026) REGISTRATION IS OPEN
           </span>
 
           <h2 className="text-3xl sm:text-5xl md:text-7xl font-display font-extrabold text-white mb-6 leading-tight tracking-tight">
@@ -44,7 +44,7 @@ export default function CTA({ onRegisterClick }: CTAProps) {
               onClick={onRegisterClick}
               className="w-full sm:w-auto bg-gradient-to-r from-[#d4af37] via-[#f7e49e] to-[#c59b27] hover:from-[#e5c158] hover:via-[#fcf0b8] hover:to-[#d4af37] text-[#00133a] font-black px-10 py-5 rounded-full font-display text-lg flex items-center justify-center gap-3 transition-all transform hover:scale-105 shadow-2xl shadow-[#d4af37]/30 cursor-pointer"
             >
-              <span>Register Now for December Edition</span>
+              <span>Register Now for Edition 2</span>
               <ArrowRight className="w-5 h-5" />
             </button>
 
@@ -52,7 +52,7 @@ export default function CTA({ onRegisterClick }: CTAProps) {
               href="#schedule"
               className="w-full sm:w-auto border-2 border-white/30 hover:border-white text-white px-8 py-5 rounded-full font-bold text-base transition-all hover:bg-white/10 text-center"
             >
-              View Schedule & Phases
+              View Schedule & Sessions
             </a>
           </div>
           

@@ -44,31 +44,40 @@ export default function About({ onRegisterClick }: AboutProps) {
               Whether you are an aspiring worship leader, a seeker craving God’s presence, or a youth leader desiring fresh vision, Worship Camp provides the setting to disconnect from distractions and connect intimately with God.
             </p>
 
-            {/* Three Pillar Icons (Cross, Flame, Hands Lifted) in Gold Accents */}
-            <div className="grid sm:grid-cols-3 gap-6 pt-2 border-t border-gray-100">
+            {/* Three Pillar Icons in Gold Accents */}
+            <div className="grid sm:grid-cols-3 gap-6 pt-6 border-t border-gray-100">
               
               <div className="flex flex-col gap-2.5">
                 <div className="w-12 h-12 rounded-2xl bg-[#002366] flex items-center justify-center text-[#f3e5ab] shadow-md shadow-[#002366]/10">
                   <Flame className="w-6 h-6 text-[#d4af37]" />
                 </div>
-                <h4 className="font-bold text-[#002366] text-base font-display">Spiritual Fire</h4>
-                <p className="text-xs text-gray-500 leading-relaxed">Deep personal revival and biblical renewal.</p>
+                <div>
+                  <span className="text-[10px] font-mono font-bold text-[#d4af37] block uppercase tracking-wider">01 — Pillar</span>
+                  <h4 className="font-bold text-[#002366] text-base font-display">Personal Revival</h4>
+                </div>
+                <p className="text-xs text-gray-500 leading-relaxed">Awakening hearts, spiritual hunger & fresh holy fire.</p>
               </div>
 
               <div className="flex flex-col gap-2.5">
                 <div className="w-12 h-12 rounded-2xl bg-[#002366] flex items-center justify-center text-[#f3e5ab] shadow-md shadow-[#002366]/10">
                   <Hand className="w-6 h-6 text-[#d4af37]" />
                 </div>
-                <h4 className="font-bold text-[#002366] text-base font-display">Youth Empowerment</h4>
-                <p className="text-xs text-gray-500 leading-relaxed">Activating callings and leadership gifts.</p>
+                <div>
+                  <span className="text-[10px] font-mono font-bold text-[#d4af37] block uppercase tracking-wider">02 — Pillar</span>
+                  <h4 className="font-bold text-[#002366] text-base font-display">Intimacy</h4>
+                </div>
+                <p className="text-xs text-gray-500 leading-relaxed">Knowing Him deeply through surrender, prayer & the Word.</p>
               </div>
 
               <div className="flex flex-col gap-2.5">
                 <div className="w-12 h-12 rounded-2xl bg-[#002366] flex items-center justify-center text-[#f3e5ab] shadow-md shadow-[#002366]/10">
                   <Cross className="w-6 h-6 text-[#d4af37]" />
                 </div>
-                <h4 className="font-bold text-[#002366] text-base font-display">Christ Centered</h4>
-                <p className="text-xs text-gray-500 leading-relaxed">Grounded in pure scripture and prayer.</p>
+                <div>
+                  <span className="text-[10px] font-mono font-bold text-[#d4af37] block uppercase tracking-wider">03 — Pillar</span>
+                  <h4 className="font-bold text-[#002366] text-base font-display">Opening Realms</h4>
+                </div>
+                <p className="text-xs text-gray-500 leading-relaxed">Living under an open heaven of revelation & power.</p>
               </div>
 
             </div>

@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { ArrowRight, Volume2, VolumeX, Sparkles, Cross, Shield, Calendar, MapPin } from 'lucide-react';
-import { IMAGES, TYPING_PHRASES, EVENT_INFO } from '../constants';
+import { IMAGES, TYPING_PHRASES, EVENT_INFO, HERO_VIDEO_URL } from '../constants';
 import { worshipAudio } from '../utils/audioPad';
 
 interface HeroProps {
@@ -52,17 +52,27 @@ export default function Hero({ onRegisterClick }: HeroProps) {
 
   return (
     <section id="home" className="relative min-h-[90vh] lg:min-h-screen flex items-center pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 overflow-hidden bg-[#00133a]">
-      {/* Background Image with Royal Blue Gradient Mask */}
-      <div className="absolute inset-0 z-0">
-        <img 
-          src={IMAGES.hero} 
-          alt="Worship Camp Atmosphere" 
-          className="w-full h-full object-cover object-center opacity-40 scale-105 transform motion-safe:animate-pulse"
-          style={{ animationDuration: '12s' }}
-          referrerPolicy="no-referrer"
-        />
+      {/* Background Video & Fallback Image with Royal Blue Gradient Mask */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          poster={IMAGES.hero}
+          className="w-full h-full object-cover object-center opacity-50 scale-105 transform"
+        >
+          <source src={HERO_VIDEO_URL} type="video/mp4" />
+          <img 
+            src={IMAGES.hero} 
+            alt="Worship Camp Atmosphere" 
+            className="w-full h-full object-cover object-center opacity-40 scale-105"
+            referrerPolicy="no-referrer"
+          />
+        </video>
         {/* Deep Royal Blue Spiritual Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#00133a] via-[#002366]/90 to-[#00133a]/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#00133a] via-[#002366]/85 to-[#00133a]/80" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-400/20 via-transparent to-[#00133a]/90" />
       </div>
 

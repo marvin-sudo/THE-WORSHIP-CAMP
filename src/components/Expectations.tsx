@@ -99,7 +99,7 @@ export default function Expectations({ onRegisterClick }: ExpectationsProps) {
               <Sparkles className="w-6 h-6" />
             </div>
             <div>
-              <h4 className="font-display font-bold text-[#002366] text-lg">Ready to experience all 5 pillars?</h4>
+              <h4 className="font-display font-bold text-[#002366] text-lg">Ready to experience the 3 pillars?</h4>
               <p className="text-xs text-gray-500">Spots are filled on a first-come, first-served basis.</p>
             </div>
           </div>

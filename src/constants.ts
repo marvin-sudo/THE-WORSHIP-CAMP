@@ -7,6 +7,7 @@ import { Cross, Flame, Hand, Users, Music, MapPin, Calendar, Clock, Star, Sparkl
 
 export const LOGO_URL = "https://www.image2url.com/r2/default/images/1787509985137-5e184dc6-06b6-46f1-a451-5348e3eeac10.png";
 export const FOOTER_LOGO_URL = "https://www.image2url.com/r2/default/images/1787510163564-c708282a-9e66-48c4-b7e8-ea3961e4995b.png";
+export const HERO_VIDEO_URL = "https://www.image2url.com/r2/default/videos/1788330674826-050e07e4-0091-4725-91b9-bdc09704b01b.mp4";
 
 // Connect official Google Form for attendee registration
 export const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScz7tqM5Z8eW3yN4xR9vP1kJ0oB6sX8uY2aC-worshipcamp2026/viewform";
@@ -69,11 +70,50 @@ export const FEATURES = [
   },
 ];
 
+export const EDITIONS = [
+  {
+    id: "edition-1",
+    editionNumber: 1,
+    name: "September Edition",
+    title: "Edition 1: The Awakening",
+    date: "September 2026",
+    status: "Completed",
+    badge: "1st Edition • September",
+    theme: "Altar of Awakening & First Fire",
+    description: "The pioneering inaugural Worship Camp gathering that united hundreds of young worshippers and set a spiritual benchmark for radical praise and consecration.",
+    highlights: [
+      "Inaugural gathering in September 2026",
+      "Over 800+ passionate worshippers united",
+      "5 hours of non-stop prayer & acoustic praise",
+      "Spiritual groundwork established for the movement"
+    ]
+  },
+  {
+    id: "edition-2",
+    editionNumber: 2,
+    name: "December Edition",
+    title: "Edition 2: Open Sky Encounter",
+    date: "1st December 2026",
+    status: "Upcoming",
+    badge: "Edition 2 • 1st Dec 2026",
+    theme: "Under Open Skies • Maisha Gardens",
+    description: "The second edition of Worship Camp hosted at Maisha Gardens. An immersive open-air atmosphere with extended acoustic praise, healing altars, and impartation.",
+    highlights: [
+      "Tuesday, 1st December 2026 @ 4:00 PM EAT",
+      "Maisha Gardens lush open-air grounds",
+      "100% Free Entry Registration with Digital Badges",
+      "Extended night of open-sky prayer & worship"
+    ]
+  }
+];
+
 export const SCHEDULE_DAYS = [
   {
-    day: "Phase 1",
+    day: "Session 1",
+    label: "Afternoon Flow",
     title: "Gates Open & Worship Atmosphere",
     date: "1st December 2026",
+    timeSpan: "03:00 PM - 06:30 PM",
     sessions: [
       { time: "03:00 PM - 04:00 PM", title: "Gates Open, Free Check-in & Acoustic Praise Prelude", type: "Arrival" },
       { time: "04:00 PM - 05:15 PM", title: "Grand Opening: Praise Explosion & Holy Spirit Invocation", type: "Worship" },
@@ -81,9 +121,11 @@ export const SCHEDULE_DAYS = [
     ]
   },
   {
-    day: "Phase 2",
+    day: "Session 2",
+    label: "Evening Encounter",
     title: "Deep Encounters & Prophetic Ministry",
     date: "1st December 2026",
+    timeSpan: "06:30 PM - 10:45 PM",
     sessions: [
       { time: "06:30 PM - 07:45 PM", title: "Extended Altar Ministry, Healing & Personal Breakthrough", type: "Revival" },
       { time: "07:45 PM - 08:30 PM", title: "Kingdom Fellowship & Refreshment Intermission", type: "Community" },
@@ -142,24 +184,28 @@ export const SPEAKERS = [
 
 export const CORE_PILLARS = [
   {
-    title: "Uncompromising Holiness & Consecration",
-    desc: "We believe in living a life set apart for God's glory, purposed to reflect His light in an increasingly noisy world.",
-    verse: "1 Peter 1:16"
+    number: "01",
+    title: "PERSONAL REVIVAL",
+    subtitle: "To Bring Personal Revival in a People",
+    desc: "Worship Camp exists to awaken hearts, restore spiritual hunger, and ignite a fresh fire for God in every individual. We believe revival begins personally before it transforms a people.",
+    scriptureText: "Will You not revive us again, that Your people may rejoice in You?",
+    verse: "Psalm 85:6"
   },
   {
-    title: "Pure, Unrestrained Worship",
-    desc: "Worship that transcends performance, shifting atmospheres and releasing heaven on earth in spirit and truth.",
-    verse: "John 4:24"
+    number: "02",
+    title: "INTIMACY",
+    subtitle: "Knowing Him, Not Just Knowing About Him",
+    desc: "We pursue a deeper relationship with God through worship, prayer, the Word, surrender, and genuine fellowship with His presence. Our desire is not simply to experience a moment, but to grow in intimacy with Him.",
+    scriptureText: "Draw near to God and He will draw near to you.",
+    verse: "James 4:8"
   },
   {
-    title: "Deep Revelation of the Word",
-    desc: "Unlocking foundational biblical truths that build unwavering faith and empower kingdom authority in daily life.",
-    verse: "Psalm 119:105"
-  },
-  {
-    title: "Vibrant Kingdom Fellowship",
-    desc: "Uniting youths, campus ministries, and worship teams in genuine spiritual brotherhood and sisterhood.",
-    verse: "Acts 2:42"
+    number: "03",
+    title: "OPENING REALMS",
+    subtitle: "Under an Open Heaven",
+    desc: "We believe worship positions us to encounter God beyond the ordinary—to experience revelation, divine encounters, spiritual awakening, transformation, and commissioning. We desire to press deeper into His presence and live under an open heaven.",
+    scriptureText: "I saw heaven opened, and behold, a throne stood in heaven.",
+    verse: "Revelation 4:1"
   }
 ];
 

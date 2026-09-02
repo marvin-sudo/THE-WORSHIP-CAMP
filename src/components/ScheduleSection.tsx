@@ -32,19 +32,24 @@ export default function ScheduleSection({ onRegisterClick }: { onRegisterClick: 
   return (
     <section id="schedule" className="py-24 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-[#d4af37] font-bold tracking-[0.2em] uppercase text-sm mb-3 block">
-            December Edition Program • 1st Dec 2026
-          </span>
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-[#002366] mb-6">
-            Event Schedule & Flow
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          {/* Editions Journey Badge */}
+          <div className="inline-flex items-center gap-2 bg-[#d4af37]/15 px-4 py-1.5 rounded-full border border-[#d4af37]/30 mb-4">
+            <Sparkles className="w-3.5 h-3.5 text-[#002366]" />
+            <span className="text-[#002366] text-xs font-extrabold uppercase tracking-widest">
+              Edition 1 (September) • Edition 2 (1st December 2026)
+            </span>
+          </div>
+          
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-[#002366] mb-4">
+            Edition 2 Schedule & Flow
           </h2>
-          <p className="text-gray-600 text-lg leading-relaxed">
-            Starting promptly at <strong>4:00 PM EAT</strong> at Maisha Gardens (Gates open 3:00 PM). Every phase is intentionally structured for worship, revelation, prayer, and authentic fellowship.
+          <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
+            Following our impactful <strong>1st Edition in September</strong>, join us on <strong>Tuesday, 1st December 2026 at Maisha Gardens</strong>. Starting promptly at 4:00 PM EAT (Gates open 3:00 PM). Every session is intentionally structured for worship, revelation, prayer, and authentic fellowship.
           </p>
         </div>
 
-        {/* Day Selector Pills */}
+        {/* Session Selector Pills */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
           {SCHEDULE_DAYS.map((day, idx) => {
             const isActive = activeDayIdx === idx;
@@ -59,8 +64,8 @@ export default function ScheduleSection({ onRegisterClick }: { onRegisterClick: 
                 }`}
               >
                 <span className={`w-2 h-2 rounded-full ${isActive ? 'bg-[#d4af37]' : 'bg-gray-400'}`} />
-                <span>{day.day}:</span>
-                <span className={isActive ? 'text-[#f3e5ab]' : 'text-gray-500 font-normal'}>{day.date}</span>
+                <span>{day.day} ({day.label}):</span>
+                <span className={isActive ? 'text-[#f3e5ab]' : 'text-gray-500 font-normal'}>{day.timeSpan}</span>
               </button>
             );
           })}
@@ -127,14 +132,14 @@ export default function ScheduleSection({ onRegisterClick }: { onRegisterClick: 
                   to="/schedule"
                   className="text-xs font-bold text-[#002366] hover:text-[#d4af37] flex items-center gap-1.5 transition-colors"
                 >
-                  <span>View Complete 4-Day Syllabus & Tracks</span>
+                  <span>Explore All Editions & Complete Program</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
                 <button
                   onClick={onRegisterClick}
-                  className="bg-[#002366] hover:bg-[#0a3d91] text-white px-6 py-2.5 rounded-full font-bold text-xs flex items-center gap-2 transition-all shadow-sm"
+                  className="bg-[#002366] hover:bg-[#0a3d91] text-white px-6 py-2.5 rounded-full font-bold text-xs flex items-center gap-2 transition-all shadow-sm cursor-pointer"
                 >
-                  Reserve Your Spot for this Day <ChevronRight className="w-4 h-4 text-[#d4af37]" />
+                  Reserve Your Spot for Edition 2 <ChevronRight className="w-4 h-4 text-[#d4af37]" />
                 </button>
               </div>
             </motion.div>

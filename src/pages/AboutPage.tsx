@@ -110,21 +110,21 @@ export default function AboutPage({ onRegisterClick }: AboutPageProps) {
       </section>
 
       {/* 3. Core Pillars of the Movement */}
-      <section className="py-20 bg-white border-y border-gray-100">
+      <section className="py-24 bg-white border-y border-gray-100">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-[#d4af37] font-bold tracking-[0.2em] uppercase text-xs sm:text-sm mb-3 block">
-              Foundational Values
+              INTRODUCTION
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-[#002366] mb-4">
-              The 4 Pillars of Worship Camp
+              The 3 Pillars of Worship Camp
             </h2>
-            <p className="text-gray-600 text-base leading-relaxed">
-              Every detail of our gathering is anchored on enduring biblical principles that ignite spiritual longevity.
+            <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
+              Worship Camp is built around three foundational pillars that define our purpose, pursuit, and experience.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {CORE_PILLARS.map((pillar, idx) => (
               <motion.div 
                 key={pillar.title}
@@ -132,22 +132,46 @@ export default function AboutPage({ onRegisterClick }: AboutPageProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.1 }}
-                className="bg-[#f8faff] rounded-3xl p-8 border border-blue-50 hover:shadow-xl transition-all group flex flex-col justify-between"
+                className="bg-[#f8faff] rounded-3xl p-8 sm:p-10 border border-blue-50 hover:shadow-2xl hover:border-blue-200 transition-all group flex flex-col justify-between relative overflow-hidden"
               >
                 <div>
-                  <div className="w-12 h-12 rounded-2xl bg-[#002366] text-[#f3e5ab] flex items-center justify-center font-display font-bold text-lg mb-6 group-hover:scale-110 transition-transform shadow-md">
-                    0{idx + 1}
+                  <div className="flex items-center justify-between gap-3 mb-6">
+                    <span 
+                      className="text-xs font-mono font-black text-[#d4af37] bg-[#d4af37]/15 px-3 py-1 rounded-full border border-[#d4af37]/30"
+                      style={{ fontFamily: "'Outfit', sans-serif" }}
+                    >
+                      {pillar.number} — {pillar.title}
+                    </span>
+                    <div className="w-10 h-10 rounded-2xl bg-[#002366] text-[#f3e5ab] flex items-center justify-center font-display font-bold text-sm group-hover:scale-110 transition-transform shadow-md">
+                      {pillar.number}
+                    </div>
                   </div>
-                  <h3 className="text-xl font-display font-bold text-[#002366] mb-3 leading-snug">
-                    {pillar.title}
+
+                  <h3 
+                    className="text-xl sm:text-2xl font-bold text-[#002366] mb-2 leading-tight"
+                    style={{ fontFamily: "'Outfit', sans-serif" }}
+                  >
+                    {pillar.subtitle}
                   </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed mb-6">
+
+                  <p className="text-gray-600 text-sm leading-relaxed mb-6 mt-3">
                     {pillar.desc}
                   </p>
                 </div>
-                <div className="pt-4 border-t border-gray-200/60 flex items-center justify-between">
-                  <span className="text-xs font-mono font-bold text-[#d4af37]">{pillar.verse}</span>
-                  <CheckCircle2 className="w-4 h-4 text-[#002366]/40" />
+
+                <div className="pt-5 border-t border-gray-200/70 bg-white/60 -mx-8 sm:-mx-10 -mb-8 sm:-mb-10 p-6 sm:p-8 rounded-b-3xl">
+                  <p className="text-[10px] uppercase font-bold tracking-widest text-gray-400 mb-1">
+                    Scripture
+                  </p>
+                  <p className="text-xs text-[#002366] italic leading-relaxed font-medium mb-2">
+                    "{pillar.scriptureText}"
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-bold text-[#d4af37]" style={{ fontFamily: "'Outfit', sans-serif" }}>
+                      — {pillar.verse}
+                    </span>
+                    <CheckCircle2 className="w-4 h-4 text-[#002366]/40" />
+                  </div>
                 </div>
               </motion.div>
             ))}
