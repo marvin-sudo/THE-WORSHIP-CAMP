@@ -61,7 +61,7 @@ export default function AboutPage({ onRegisterClick }: AboutPageProps) {
                 to="/register" 
                 className="bg-[#002366] hover:bg-[#0a3d91] text-white font-bold px-7 py-3.5 rounded-full text-sm inline-flex items-center gap-2 shadow-md transition-all cursor-pointer"
               >
-                <span>Register for September Edition</span>
+                <span>Register for December Edition</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link 
@@ -83,7 +83,7 @@ export default function AboutPage({ onRegisterClick }: AboutPageProps) {
               />
               <div className="p-6 bg-[#00173d] text-white">
                 <div className="flex items-center gap-2 text-[#d4af37] text-xs font-extrabold uppercase tracking-widest mb-2">
-                  <Sparkles className="w-4 h-4" /> September Edition @ Maisha Gardens
+                  <Sparkles className="w-4 h-4" /> December Edition @ Maisha Gardens
                 </div>
                 <h3 className="font-display font-bold text-xl mb-2">
                   Open-Air Garden Sanctuary
@@ -155,13 +155,13 @@ export default function AboutPage({ onRegisterClick }: AboutPageProps) {
         </div>
       </section>
 
-      {/* 4. Why September Edition at Maisha Gardens */}
+      {/* 4. Why December Edition at Maisha Gardens */}
       <section className="py-20 max-w-7xl mx-auto px-6">
         <div className="bg-gradient-to-r from-[#00173d] to-[#002b7a] rounded-[2.5rem] p-8 sm:p-14 text-white relative overflow-hidden shadow-2xl">
           <div className="relative z-10 grid lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-8">
               <span className="text-[#f3e5ab] text-xs uppercase font-extrabold tracking-[0.2em] block mb-3">
-                September 2026 Edition
+                December 2026 Edition
               </span>
               <h3 className="text-2xl sm:text-4xl font-display font-bold mb-4 leading-tight">
                 Why We Chose Maisha Gardens
@@ -175,7 +175,7 @@ export default function AboutPage({ onRegisterClick }: AboutPageProps) {
                   <MapPin className="w-4 h-4 text-[#d4af37]" /> Maisha Gardens Grounds
                 </div>
                 <div className="flex items-center gap-2 bg-white/10 px-3.5 py-2 rounded-xl border border-white/10">
-                  <Calendar className="w-4 h-4 text-[#d4af37]" /> Tuesday, 1st September 2026 @ 4:00 PM EAT
+                  <Calendar className="w-4 h-4 text-[#d4af37]" /> Tuesday, 1st December 2026 @ 4:00 PM EAT
                 </div>
               </div>
             </div>

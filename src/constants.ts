@@ -24,7 +24,7 @@ export const NAV_LINKS = [
 ];
 
 export const TYPING_PHRASES = [
-  "September Edition • 1st September 2026 @ Maisha Gardens",
+  "December Edition • 1st December 2026 @ Maisha Gardens",
   "Starts at 4:00 PM EAT • Register Early to Secure Your Spot!",
   "We Worship. We Encounter. We Transform.",
   "Igniting a Generation of Holy Fire & Divine Presence."
@@ -73,7 +73,7 @@ export const SCHEDULE_DAYS = [
   {
     day: "Phase 1",
     title: "Gates Open & Worship Atmosphere",
-    date: "1st September 2026",
+    date: "1st December 2026",
     sessions: [
       { time: "03:00 PM - 04:00 PM", title: "Gates Open, Free Check-in & Acoustic Praise Prelude", type: "Arrival" },
       { time: "04:00 PM - 05:15 PM", title: "Grand Opening: Praise Explosion & Holy Spirit Invocation", type: "Worship" },
@@ -83,7 +83,7 @@ export const SCHEDULE_DAYS = [
   {
     day: "Phase 2",
     title: "Deep Encounters & Prophetic Ministry",
-    date: "1st September 2026",
+    date: "1st December 2026",
     sessions: [
       { time: "06:30 PM - 07:45 PM", title: "Extended Altar Ministry, Healing & Personal Breakthrough", type: "Revival" },
       { time: "07:45 PM - 08:30 PM", title: "Kingdom Fellowship & Refreshment Intermission", type: "Community" },
@@ -197,44 +197,80 @@ export const FREE_EVENT_HIGHLIGHTS = [
 
 export const TESTIMONIALS = [
   {
-    quote: "My life was never the same after Worship Camp. The atmosphere of genuine praise broke chains I had carried for years.",
-    author: "Sarah J.",
-    role: "Youth Leader, Atlanta",
+    id: 1,
+    quote: "My life was never the same after Worship Camp. The atmosphere of unbroken praise in the gardens broke spiritual burdens I had carried for years. Walking away with a clean heart and a burning fire for prayer.",
+    author: "Sarah Namubiru",
+    role: "Youth Fellowship Coordinator",
+    edition: "Attended 2025 Edition",
+    location: "Kampala",
     rating: 5,
+    highlight: "Life-Transforming Encounter",
   },
   {
-    quote: "The teachings were practical yet profoundly anointed. The community embraced me instantly. A must-attend for every young believer.",
-    author: "David M.",
-    role: "University Student, Dallas",
+    id: 2,
+    quote: "The acoustic worship under open skies at Maisha Gardens is completely unmatched. You aren't just in a concert — you are genuinely sitting at the feet of Jesus. Every youth should experience this.",
+    author: "David Mukisa",
+    role: "University Student & Musician",
+    edition: "Attended 2024 & 2025",
+    location: "Wakiso",
     rating: 5,
+    highlight: "Unmatched Atmosphere",
   },
   {
-    quote: "I found a renewed fire for prayer and the secret place. The Saturday starlit worship was like a taste of heaven on earth.",
-    author: "Emma W.",
-    role: "Worship Leader, Seattle",
+    id: 3,
+    quote: "I found a rekindled devotion for the secret place and scripture. The ministering was deep, grounded, and intensely anointed. You leave spiritually refreshed and ready to impact your generation.",
+    author: "Grace Atuhaire",
+    role: "Worship Leader & Vocalist",
+    edition: "Attended 2025 Edition",
+    location: "Entebbe",
     rating: 5,
+    highlight: "Renewed Spiritual Hunger",
   },
   {
-    quote: "Our entire worship band came together and we left with fresh vision, unified hearts, and songs birthed directly in the presence of God.",
-    author: "Joshua K.",
-    role: "Music Director, Chicago",
+    id: 4,
+    quote: "Our choir and ministry team attended together. We arrived tired from routine ministry and left unified, overflowing with prophetic songs and fresh clarity for God's calling upon our lives.",
+    author: "Joshua Kigozi",
+    role: "Music & Creative Arts Director",
+    edition: "Attended 2024 Edition",
+    location: "Mukono",
     rating: 5,
+    highlight: "Ministry Alignment",
+  },
+  {
+    id: 5,
+    quote: "From the moment the opening sound began at 4 PM until the starlit prayer close, the presence of the Holy Spirit was tangible. The organization, sound quality, and warm hospitality were top tier.",
+    author: "Emmanuel Byaruhanga",
+    role: "Young Professional & Attendee",
+    edition: "Attended 2025 Edition",
+    location: "Nansana",
+    rating: 5,
+    highlight: "Tangible Presence & Peace",
+  },
+  {
+    id: 6,
+    quote: "No distractions, no sales pitches — just pure, passionate, Christ-centered worship. I invited three of my unchurched campus friends and all of them surrendered their hearts that evening.",
+    author: "Priscilla Kyomugisha",
+    role: "Campus Evangelism Lead",
+    edition: "Attended 2024 & 2025",
+    location: "Makerere",
+    rating: 5,
+    highlight: "Salvation & Fellowship",
   }
 ];
 
 export const EVENT_INFO = {
-  edition: "SEPTEMBER EDITION",
-  name: "Worship Camp: September Edition",
+  edition: "DECEMBER EDITION",
+  name: "Worship Camp: December Edition",
   logoUrl: LOGO_URL,
-  date: "1st September 2026",
-  dateDetail: "Tuesday, 1st September 2026",
-  targetDate: "2026-09-01T16:00:00+03:00",
+  date: "1st December 2026",
+  dateDetail: "Tuesday, 1st December 2026",
+  targetDate: "2026-12-01T16:00:00+03:00",
   locationName: "Maisha Gardens",
-  locationAddress: "Maisha Gardens, Nairobi, Kenya (East Africa)",
+  locationAddress: "Maisha Gardens, Nakuwadde",
   time: "Starting at 4:00 PM EAT",
   timeDetail: "Gates Open 3:00 PM • Main Session Starts 4:00 PM EAT",
   timezone: "EAT (UTC+3)",
-  coordinates: { lat: -1.286389, lng: 36.817223 },
+  coordinates: { lat: 0.3542, lng: 32.4831 },
   venueHighlights: [
     "Lush Natural Garden Sanctuary with Open-Air Skies",
     "State-of-the-Art Acoustic Worship Sound & Lighting",
@@ -299,11 +335,11 @@ export const IMAGES = {
 export const FAQS = [
   {
     question: "Is Worship Camp free to attend?",
-    answer: "Yes! Worship Camp: September Edition is 100% FREE to attend. All worship sessions, prayer altars, and keynote teachings at Maisha Gardens are completely free of charge. Simply register via our connected Google Form or instant form to secure your free digital entry badge."
+    answer: "Yes! Worship Camp: December Edition is 100% FREE to attend. All worship sessions, prayer altars, and keynote teachings at Maisha Gardens are completely free of charge. Simply register via our connected Google Form or instant form to secure your free digital entry badge."
   },
   {
-    question: "When and where is the September Edition happening?",
-    answer: "Worship Camp: September Edition takes place on Tuesday, 1st September 2026 at Maisha Gardens. Gates open at 3:00 PM and the main spiritual encounter starts promptly at 4:00 PM EAT."
+    question: "When and where is the December Edition happening?",
+    answer: "Worship Camp: December Edition takes place on Tuesday, 1st December 2026 at Maisha Gardens. Gates open at 3:00 PM and the main spiritual encounter starts promptly at 4:00 PM EAT."
   },
   {
     question: "Why do I need to register if it's a free event?",

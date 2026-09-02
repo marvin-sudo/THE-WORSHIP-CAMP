@@ -51,7 +51,7 @@ export default function Hero({ onRegisterClick }: HeroProps) {
   };
 
   return (
-    <section id="home" className="relative min-h-[92vh] lg:min-h-screen flex items-center pt-28 pb-20 overflow-hidden bg-[#00133a]">
+    <section id="home" className="relative min-h-[90vh] lg:min-h-screen flex items-center pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 overflow-hidden bg-[#00133a]">
       {/* Background Image with Royal Blue Gradient Mask */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -69,46 +69,48 @@ export default function Hero({ onRegisterClick }: HeroProps) {
       {/* Floating Radiant Glow & Light Rays */}
       <div className="absolute inset-0 z-1 pointer-events-none overflow-hidden">
         {/* Soft rotating celestial light beam */}
-        <div className="absolute -top-[300px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-gradient-to-b from-[#d4af37]/20 via-blue-500/10 to-transparent rounded-full blur-[140px] animate-soft-pulse pointer-events-none" />
+        <div className="absolute -top-40 sm:-top-72 left-1/2 -translate-x-1/2 w-[350px] sm:w-[600px] md:w-[800px] h-[350px] sm:h-[600px] md:h-[800px] bg-gradient-to-b from-[#d4af37]/20 via-blue-500/10 to-transparent rounded-full blur-[100px] sm:blur-[140px] animate-soft-pulse pointer-events-none" />
 
-        {/* Ambient Light Ray Beams */}
-        {[...Array(6)].map((_, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0.1, rotate: -25 + i * 10 }}
-            animate={{ 
-              opacity: [0.1, 0.25, 0.1],
-              scale: [1, 1.05, 1],
-            }}
-            transition={{
-              duration: 6 + i * 1.5,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-            className="absolute -top-40 left-1/2 w-4 md:w-8 h-[1200px] origin-top bg-gradient-to-b from-white/20 via-blue-300/10 to-transparent blur-xl"
-            style={{ transform: `translateX(${(i - 2.5) * 160}px) rotate(${-20 + i * 8}deg)` }}
-          />
-        ))}
+        {/* Ambient Light Ray Beams - Hidden on small mobile to avoid layout shifts */}
+        <div className="hidden sm:block">
+          {[...Array(5)].map((_, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0.08, rotate: -20 + i * 10 }}
+              animate={{ 
+                opacity: [0.08, 0.2, 0.08],
+                scale: [1, 1.05, 1],
+              }}
+              transition={{
+                duration: 6 + i * 1.5,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+              className="absolute -top-40 left-1/2 w-4 md:w-8 h-[1000px] origin-top bg-gradient-to-b from-white/20 via-blue-300/10 to-transparent blur-xl"
+              style={{ transform: `translateX(${(i - 2) * 150}px) rotate(${-15 + i * 7}deg)` }}
+            />
+          ))}
+        </div>
 
         {/* Ambient floating luminous particles */}
-        {[...Array(12)].map((_, i) => (
+        {[...Array(8)].map((_, i) => (
           <motion.div
             key={`p-${i}`}
             initial={{ 
-              x: `${(i * 9) + 5}%`, 
-              y: `${70 + (i % 5) * 6}%`, 
+              x: `${(i * 12) + 6}%`, 
+              y: `${70 + (i % 4) * 6}%`, 
               opacity: 0.2 
             }}
             animate={{ 
-              y: [`${70 + (i % 5) * 6}%`, `${10 + (i % 4) * 10}%`],
-              opacity: [0.2, 0.8, 0],
-              scale: [0.8, 1.4, 0.8]
+              y: [`${70 + (i % 4) * 6}%`, `${15 + (i % 3) * 12}%`],
+              opacity: [0.2, 0.7, 0],
+              scale: [0.8, 1.3, 0.8]
             }}
             transition={{
-              duration: 8 + (i % 4) * 3,
+              duration: 8 + (i % 4) * 2.5,
               repeat: Infinity,
               ease: "easeInOut",
-              delay: i * 0.7
+              delay: i * 0.8
             }}
             className="absolute w-2 h-2 rounded-full bg-[#f3e5ab] blur-[1px]"
           />
@@ -116,29 +118,30 @@ export default function Hero({ onRegisterClick }: HeroProps) {
       </div>
 
       {/* Main Hero Container */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
-        <div className="grid lg:grid-cols-12 gap-12 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
           {/* Left Text Column */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="lg:col-span-8 max-w-3xl"
+            className="lg:col-span-8 max-w-3xl text-left"
           >
             {/* Top Brand & Edition Tag */}
-            <div className="mb-6 inline-flex flex-wrap items-center gap-3 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/15">
-              <span className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-[#d4af37] to-[#f7e49e] animate-ping" />
-              <span className="text-[#f3e5ab] uppercase tracking-[0.25em] font-extrabold text-xs">
-                SEPTEMBER EDITION • 1ST SEPT 2026 • 4PM EAT
+            <div className="mb-4 sm:mb-6 inline-flex flex-wrap items-center gap-2 sm:gap-3 bg-white/10 backdrop-blur-md px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/15">
+              <span className="w-2 h-2 rounded-full bg-gradient-to-r from-[#d4af37] to-[#f7e49e] animate-ping" />
+              <span className="text-[#f3e5ab] uppercase tracking-[0.2em] sm:tracking-[0.25em] font-extrabold text-[10px] sm:text-xs">
+                <span className="sm:hidden">DECEMBER EDITION</span>
+                <span className="hidden sm:inline">DECEMBER EDITION • 1ST DEC 2026 • 4PM EAT</span>
               </span>
-              <span className="bg-gradient-to-r from-[#d4af37] via-[#f7e49e] to-[#c59b27] text-[#00133a] text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider shadow-sm">
+              <span className="bg-gradient-to-r from-[#d4af37] via-[#f7e49e] to-[#c59b27] text-[#00133a] text-[9px] sm:text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider shadow-sm">
                 Maisha Gardens
               </span>
             </div>
             
             {/* Headline */}
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold text-white leading-[1.1] mb-6 tracking-tight">
+            <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-extrabold text-white leading-[1.1] mb-4 sm:mb-6 tracking-tight">
               Experience God <br /> 
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-[#f3e5ab] to-[#d4af37]">
                 Like Never Before
@@ -146,33 +149,23 @@ export default function Hero({ onRegisterClick }: HeroProps) {
             </h1>
 
             {/* Subheadline */}
-            <p className="text-lg sm:text-xl md:text-2xl text-blue-100/90 mb-4 leading-relaxed font-light">
+            <p className="text-base sm:text-lg md:text-xl text-blue-100/90 mb-6 sm:mb-8 leading-relaxed font-light">
               Join Worship Camp for a life-changing encounter of praise, word, and fellowship at <strong>Maisha Gardens</strong>. Step out of the noise and into the secret place.
             </p>
 
-            {/* Urgent Registration Banner */}
-            <div className="mb-8 p-3.5 bg-gradient-to-r from-[#d4af37]/20 via-blue-500/10 to-transparent rounded-2xl border border-[#d4af37]/40 flex items-center gap-3 max-w-xl">
-              <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-[#d4af37] via-[#f7e49e] to-[#c59b27] text-[#00133a] flex items-center justify-center font-bold shrink-0 shadow-md">
-                🔥
-              </div>
-              <p className="text-xs sm:text-sm text-[#f3e5ab] font-medium leading-tight">
-                <strong>100% Free Event:</strong> Pre-registration via Google Forms is required to secure your entry badge before capacity is reached.
-              </p>
-            </div>
-
             {/* CTAs */}
-            <div className="flex flex-wrap items-center gap-4 mb-10">
+            <div className="flex flex-wrap items-center gap-3 sm:gap-4 mb-8 sm:mb-10">
               <button 
                 onClick={onRegisterClick}
-                className="bg-gradient-to-r from-[#d4af37] via-[#f7e49e] to-[#c59b27] hover:from-[#e5c158] hover:via-[#fcf0b8] hover:to-[#d4af37] text-[#00133a] font-black px-8 sm:px-10 py-4 sm:py-5 rounded-full font-display text-base sm:text-lg flex items-center gap-3 transition-all transform hover:scale-105 shadow-xl shadow-[#d4af37]/30 group cursor-pointer"
+                className="w-full sm:w-auto bg-gradient-to-r from-[#d4af37] via-[#f7e49e] to-[#c59b27] hover:from-[#e5c158] hover:via-[#fcf0b8] hover:to-[#d4af37] text-[#00133a] font-black px-7 sm:px-9 py-3.5 sm:py-4 rounded-full font-display text-sm sm:text-base flex items-center justify-center gap-2.5 transition-all transform hover:scale-105 shadow-xl shadow-[#d4af37]/30 group cursor-pointer"
               >
                 <span>Register Free Now</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
               </button>
 
               <Link 
                 to="/venue"
-                className="border-2 border-white/40 hover:border-white text-white hover:bg-white/10 px-8 sm:px-10 py-4 sm:py-5 rounded-full font-bold text-base sm:text-lg transition-all backdrop-blur-md inline-flex items-center justify-center"
+                className="w-full sm:w-auto border-2 border-white/40 hover:border-white text-white hover:bg-white/10 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold text-sm sm:text-base transition-all backdrop-blur-md inline-flex items-center justify-center text-center"
               >
                 Venue & Map Guide
               </Link>
@@ -180,7 +173,7 @@ export default function Hero({ onRegisterClick }: HeroProps) {
               {/* Worship Pad Audio Atmosphere Toggle */}
               <button
                 onClick={toggleWorshipSound}
-                className={`flex items-center gap-2.5 px-5 py-4 rounded-full border text-xs font-semibold backdrop-blur-md transition-all ${
+                className={`w-full sm:w-auto flex items-center justify-center gap-2 px-4 sm:px-5 py-3 sm:py-3.5 rounded-full border text-xs font-semibold backdrop-blur-md transition-all cursor-pointer ${
                   isAudioPlaying
                     ? 'bg-[#d4af37]/20 border-[#d4af37] text-[#f3e5ab]'
                     : 'bg-white/5 border-white/20 text-white/80 hover:bg-white/10'
@@ -190,7 +183,7 @@ export default function Hero({ onRegisterClick }: HeroProps) {
                 {isAudioPlaying ? (
                   <>
                     <Volume2 className="w-4 h-4 text-[#d4af37] animate-pulse" />
-                    <span className="hidden sm:inline">Pad Sound Playing</span>
+                    <span>Pad Audio Active</span>
                     <span className="flex gap-0.5 items-end h-3">
                       <span className="w-0.5 bg-[#d4af37] h-full animate-bounce" />
                       <span className="w-0.5 bg-[#d4af37] h-2/3 animate-bounce delay-75" />
@@ -200,19 +193,19 @@ export default function Hero({ onRegisterClick }: HeroProps) {
                 ) : (
                   <>
                     <VolumeX className="w-4 h-4 text-gray-400" />
-                    <span>Atmosphere Chords (Audio)</span>
+                    <span>Atmosphere Sound</span>
                   </>
                 )}
               </button>
             </div>
 
             {/* Dynamic Typing Text Banner */}
-            <div className="pt-4 border-t border-white/10 flex items-center gap-3">
-              <Sparkles className="w-5 h-5 text-[#d4af37] shrink-0" />
-              <div className="min-h-[28px] flex items-center">
-                <span className="text-[#f3e5ab] font-mono text-sm sm:text-base tracking-wider font-medium">
+            <div className="pt-4 border-t border-white/10 flex items-center gap-2.5 sm:gap-3">
+              <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-[#d4af37] shrink-0" />
+              <div className="min-h-[26px] flex items-center">
+                <span className="text-[#f3e5ab] font-mono text-xs sm:text-sm md:text-base tracking-wider font-medium">
                   {displayText}
-                  <span className="inline-block w-2 h-4 bg-[#d4af37] ml-1 animate-pulse" />
+                  <span className="inline-block w-1.5 h-3.5 bg-[#d4af37] ml-1 animate-pulse" />
                 </span>
               </div>
             </div>
@@ -226,35 +219,35 @@ export default function Hero({ onRegisterClick }: HeroProps) {
             className="lg:col-span-4 hidden lg:flex flex-col items-center justify-center relative"
           >
             {/* Glowing Cross Card */}
-            <div className="relative w-full max-w-sm bg-gradient-to-b from-white/15 to-white/5 backdrop-blur-xl p-8 rounded-[3rem] border border-white/20 shadow-2xl text-center">
+            <div className="relative w-full max-w-sm bg-gradient-to-b from-white/15 to-white/5 backdrop-blur-xl p-8 rounded-3xl border border-white/20 shadow-2xl text-center">
               
               {/* Outer Golden Cross Aura */}
-              <div className="relative w-32 h-32 mx-auto mb-6 flex items-center justify-center">
+              <div className="relative w-28 h-28 mx-auto mb-5 flex items-center justify-center">
                 <div className="absolute inset-0 bg-[#d4af37] rounded-full blur-2xl opacity-40 animate-soft-pulse" />
-                <div className="w-24 h-24 rounded-3xl bg-gradient-to-br from-[#002366] to-[#00133a] border-2 border-[#d4af37] flex items-center justify-center shadow-2xl relative z-10">
-                  <Cross className="w-12 h-12 text-[#f3e5ab]" />
+                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#002366] to-[#00133a] border-2 border-[#d4af37] flex items-center justify-center shadow-2xl relative z-10">
+                  <Cross className="w-10 h-10 text-[#f3e5ab]" />
                 </div>
               </div>
 
               <div className="inline-block bg-gradient-to-r from-[#d4af37] via-[#f7e49e] to-[#c59b27] text-[#00133a] text-[10px] font-black uppercase px-3.5 py-1 rounded-full mb-3 tracking-wider shadow-md">
-                September Edition
+                December Edition
               </div>
 
-              <h3 className="text-2xl font-display font-bold text-white mb-2">
+              <h3 className="text-xl font-display font-bold text-white mb-2">
                 Divine Encounters
               </h3>
-              <p className="text-xs text-blue-100/70 leading-relaxed mb-6">
+              <p className="text-xs text-blue-100/70 leading-relaxed mb-5">
                 “Where two or three are gathered in My name, there am I among them.”
               </p>
 
               {/* Event Mini Meta */}
-              <div className="space-y-2.5 text-left bg-black/20 p-4 rounded-2xl border border-white/10 text-xs text-white/90">
-                <div className="flex items-center gap-2.5">
-                  <Calendar className="w-4 h-4 text-[#d4af37]" />
+              <div className="space-y-2 text-left bg-black/20 p-3.5 rounded-2xl border border-white/10 text-xs text-white/90">
+                <div className="flex items-center gap-2">
+                  <Calendar className="w-3.5 h-3.5 text-[#d4af37] shrink-0" />
                   <span className="font-semibold">{EVENT_INFO.dateDetail || EVENT_INFO.date}</span>
                 </div>
-                <div className="flex items-center gap-2.5">
-                  <MapPin className="w-4 h-4 text-[#d4af37]" />
+                <div className="flex items-center gap-2">
+                  <MapPin className="w-3.5 h-3.5 text-[#d4af37] shrink-0" />
                   <span className="truncate">{EVENT_INFO.locationName} • 4:00 PM EAT</span>
                 </div>
               </div>

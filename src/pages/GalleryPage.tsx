@@ -142,7 +142,7 @@ export default function GalleryPage({ onPhotoClick }: GalleryPageProps) {
           </h3>
 
           <p className="text-gray-500 text-sm max-w-xl mx-auto">
-            Experience the reality firsthand on <strong>1st September 2026 at Maisha Gardens</strong>.
+            Experience the reality firsthand on <strong>1st December 2026 at Maisha Gardens</strong>.
           </p>
 
           <div className="pt-4">
@@ -150,7 +150,7 @@ export default function GalleryPage({ onPhotoClick }: GalleryPageProps) {
               to="/register"
               className="bg-[#002366] hover:bg-[#0a3d91] text-white font-bold px-8 py-4 rounded-full text-sm inline-flex items-center gap-2 shadow-xl transition-all"
             >
-              <span>Register for September Edition</span>
+              <span>Register for December Edition</span>
               <ArrowRight className="w-4 h-4 text-[#d4af37]" />
             </Link>
           </div>

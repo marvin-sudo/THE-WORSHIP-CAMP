@@ -5,10 +5,10 @@
 
 import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
+import CountdownTimer from '../components/CountdownTimer';
 import About from '../components/About';
 import Expectations from '../components/Expectations';
 import ScheduleSection from '../components/ScheduleSection';
-import SpeakersSection from '../components/SpeakersSection';
 import EventDetails from '../components/EventDetails';
 import Gallery from '../components/Gallery';
 import Testimonials from '../components/Testimonials';
@@ -36,7 +36,7 @@ export default function HomePage({ onRegisterClick, onOpenMap, onPhotoClick }: H
             <div className="flex flex-wrap items-center gap-6 text-xs font-semibold text-blue-100/90">
               <div className="flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-[#d4af37] animate-pulse" />
-                <span className="font-extrabold text-[#f3e5ab] uppercase tracking-wider">September Edition:</span>
+                <span className="font-extrabold text-[#f3e5ab] uppercase tracking-wider">December Edition:</span>
                 <span>{EVENT_INFO.dateDetail}</span>
               </div>
               <div className="hidden sm:flex items-center gap-2">
@@ -68,7 +68,10 @@ export default function HomePage({ onRegisterClick, onOpenMap, onPhotoClick }: H
         </div>
       </section>
 
-      {/* 2. About Section */}
+      {/* 2. Live Countdown Timer until December 1st, 2026 */}
+      <CountdownTimer onRegisterClick={onRegisterClick} />
+
+      {/* 3. About Section */}
       <About onRegisterClick={onRegisterClick} />
 
       {/* 3. Expectations / Features */}
@@ -77,10 +80,7 @@ export default function HomePage({ onRegisterClick, onOpenMap, onPhotoClick }: H
       {/* 4. Schedule & Flow */}
       <ScheduleSection onRegisterClick={onRegisterClick} />
 
-      {/* 5. Ministers & Speakers */}
-      <SpeakersSection />
-
-      {/* 6. Event Details & Live Countdown */}
+      {/* 5. Event Details & Live Countdown */}
       <EventDetails 
         onOpenMap={onOpenMap} 
         onRegisterClick={onRegisterClick} 

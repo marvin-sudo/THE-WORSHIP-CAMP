@@ -178,7 +178,7 @@ export default function Navbar({ onRegisterClick }: NavbarProps) {
             </div>
 
             <div className="py-2 flex items-center justify-between text-xs text-blue-200/70 border-b border-white/10">
-              <span className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5 text-[#d4af37]" /> 1st Sept 2026 • 4PM EAT</span>
+              <span className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5 text-[#d4af37]" /> 1st Dec 2026 • 4PM EAT</span>
               <span className="flex items-center gap-1.5"><MapPin className="w-3.5 h-3.5 text-[#d4af37]" /> Maisha Gardens</span>
             </div>
 
@@ -208,7 +208,7 @@ export default function Navbar({ onRegisterClick }: NavbarProps) {
                 className="w-full bg-gradient-to-r from-[#d4af37] via-[#f7e49e] to-[#c59b27] text-[#00133a] py-3.5 rounded-xl font-black text-sm shadow-lg shadow-[#d4af37]/20 cursor-pointer flex items-center justify-center gap-2"
               >
                 <Sparkles className="w-4 h-4" />
-                <span>Register for September Edition</span>
+                <span>Register for December Edition</span>
               </button>
             </div>
           </motion.div>

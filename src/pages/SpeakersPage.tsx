@@ -24,7 +24,7 @@ export default function SpeakersPage() {
     <div className="bg-[#f8faff] min-h-screen">
       {/* 1. Page Header */}
       <PageHeader 
-        badge="September Edition Ministers"
+        badge="December Edition Ministers"
         title="Guest Speakers & Worship Leaders"
         subtitle="Anointed ministers, psalmodists, and biblical teachers gathering to release God's fire at Maisha Gardens."
         breadcrumb="Ministers & Speakers"
@@ -148,7 +148,7 @@ export default function SpeakersPage() {
               Participating Choirs & Bands
             </h3>
             <p className="text-gray-600 text-sm mt-2">
-              Over 20 youth choirs and worship collectives are uniting their sound for the September Edition at Maisha Gardens.
+              Over 20 youth choirs and worship collectives are uniting their sound for the December Edition at Maisha Gardens.
             </p>
           </div>
 

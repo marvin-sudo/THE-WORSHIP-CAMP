@@ -71,12 +71,12 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
                 <Sparkles className="w-3.5 h-3.5" /> 100% FREE ADMISSION
               </span>
               <h3 className="text-2xl md:text-3xl font-display font-bold text-white">
-                {isConfirmed ? 'Registration Confirmed!' : 'September Edition Registration'}
+                {isConfirmed ? 'Registration Confirmed!' : 'December Edition Registration'}
               </h3>
               <p className="text-blue-100/80 text-sm mt-1">
                 {isConfirmed 
                   ? 'Your digital badge for Maisha Gardens is ready. We look forward to worshipping with you!' 
-                  : '1st September 2026 @ Maisha Gardens • Gates Open 3:00 PM • Starts 4:00 PM EAT'}
+                  : '1st December 2026 @ Maisha Gardens • Gates Open 3:00 PM • Starts 4:00 PM EAT'}
               </p>
             </div>
             <button 
@@ -191,13 +191,13 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
-                      Phone Number
+                      Phone / WhatsApp Number
                     </label>
                     <div className="relative">
                       <Phone className="w-4 h-4 absolute left-3.5 top-3.5 text-gray-400" />
                       <input 
                         type="tel"
-                        placeholder="e.g. +254 700 123 456"
+                        placeholder="e.g. +256 700 123 456"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-gray-200 focus:border-[#002366] focus:ring-2 focus:ring-[#002366]/10 outline-none text-sm"
@@ -213,7 +213,7 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
                       <Church className="w-4 h-4 absolute left-3.5 top-3.5 text-gray-400" />
                       <input 
                         type="text"
-                        placeholder="e.g. Nairobi Chapel"
+                        placeholder="e.g. Local Fellowship / Campus CU"
                         value={formData.churchOrCity}
                         onChange={(e) => setFormData({ ...formData, churchOrCity: e.target.value })}
                         className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-gray-200 focus:border-[#002366] focus:ring-2 focus:ring-[#002366]/10 outline-none text-sm"
@@ -244,7 +244,7 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
                   </label>
                   <textarea 
                     rows={2}
-                    placeholder="Share what you are believing God for during this September Edition..."
+                    placeholder="Share what you are believing God for during this December Edition..."
                     value={formData.specialNotes}
                     onChange={(e) => setFormData({ ...formData, specialNotes: e.target.value })}
                     className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-[#002366] focus:ring-2 focus:ring-[#002366]/10 outline-none text-sm resize-none"
@@ -304,7 +304,7 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
               <div>
                 <h4 className="text-2xl font-display font-bold text-[#002366]">You're Registered for Free!</h4>
                 <p className="text-gray-600 text-sm max-w-md mx-auto mt-1">
-                  Your spot for Worship Camp: September Edition at Maisha Gardens is confirmed.
+                  Your spot for Worship Camp: December Edition at Maisha Gardens is confirmed.
                 </p>
               </div>
 
@@ -320,7 +320,7 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
                       className="h-9 w-auto object-contain drop-shadow"
                     />
                     <div>
-                      <span className="text-[10px] uppercase font-bold tracking-widest text-[#d4af37]">September Edition</span>
+                      <span className="text-[10px] uppercase font-bold tracking-widest text-[#d4af37]">December Edition</span>
                       <h5 className="font-display font-bold text-base text-white">Worship Camp 2026</h5>
                     </div>
                   </div>
@@ -342,7 +342,7 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
                   </div>
                   <div>
                     <span className="text-white/60 block">DATE & TIME</span>
-                    <strong className="text-white">1st Sept 2026 @ 4:00 PM EAT</strong>
+                    <strong className="text-white">1st Dec 2026 @ 4:00 PM EAT</strong>
                   </div>
                   <div>
                     <span className="text-white/60 block">VENUE</span>
@@ -364,7 +364,7 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
               <div className="flex justify-center gap-4 pt-2">
                 <button
                   type="button"
-                  onClick={() => alert(`Digital badge downloaded for ${formData.fullName}! See you at Maisha Gardens on 1st September 2026 at 4:00 PM EAT.`)}
+                  onClick={() => alert(`Digital badge downloaded for ${formData.fullName}! See you at Maisha Gardens on 1st December 2026 at 4:00 PM EAT.`)}
                   className="bg-gradient-to-r from-[#d4af37] via-[#f7e49e] to-[#c59b27] hover:from-[#e5c158] hover:via-[#fcf0b8] hover:to-[#d4af37] text-[#00133a] px-6 py-2.5 rounded-full font-black text-sm flex items-center gap-2 shadow-md shadow-[#d4af37]/20 transition-all cursor-pointer"
                 >
                   <Download className="w-4 h-4" /> Download Free Badge

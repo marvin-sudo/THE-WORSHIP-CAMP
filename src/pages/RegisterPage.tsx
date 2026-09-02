@@ -66,7 +66,7 @@ export default function RegisterPage() {
       {/* 1. Page Header */}
       <PageHeader 
         badge="100% Free Event Registration"
-        title="September Edition Registration"
+        title="December Edition Registration"
         subtitle="Worship Camp is completely FREE to attend. Register yourself or your church group below via Google Forms or generate your instant digital badge for Maisha Gardens."
         breadcrumb="Register"
       />
@@ -81,7 +81,7 @@ export default function RegisterPage() {
             Join Us in God's Presence
           </h2>
           <p className="text-gray-600 text-sm mt-2">
-            No ticket fees or pass charges. Tuesday, 1st September 2026 @ Maisha Gardens.
+            No ticket fees or pass charges. Tuesday, 1st December 2026 @ Maisha Gardens.
           </p>
         </div>
 
@@ -229,7 +229,7 @@ export default function RegisterPage() {
                             name="phone"
                             value={formData.phone}
                             onChange={handleInputChange}
-                            placeholder="+254 700 123 456"
+                            placeholder="+256 700 123 456"
                             className="w-full bg-[#f8faff] border border-gray-200 focus:border-[#002366] focus:bg-white rounded-2xl pl-11 pr-4 py-3.5 text-sm text-gray-900 outline-none transition-all"
                           />
                         </div>
@@ -246,7 +246,7 @@ export default function RegisterPage() {
                             name="churchName"
                             value={formData.churchName}
                             onChange={handleInputChange}
-                            placeholder="e.g. Nairobi Chapel / Campus CU"
+                            placeholder="e.g. Local Fellowship / Campus CU"
                             className="w-full bg-[#f8faff] border border-gray-200 focus:border-[#002366] focus:bg-white rounded-2xl pl-11 pr-4 py-3.5 text-sm text-gray-900 outline-none transition-all"
                           />
                         </div>
@@ -319,7 +319,7 @@ export default function RegisterPage() {
                         <span>Complete Free Registration & Get Badge</span>
                       </button>
                       <p className="text-center text-[11px] text-gray-400 mt-3">
-                        Free admission for 1st September 2026 @ Maisha Gardens • Gates open 3:00 PM EAT.
+                        Free admission for 1st December 2026 @ Maisha Gardens • Gates open 3:00 PM EAT.
                       </p>
                     </div>
                   </form>
@@ -339,7 +339,7 @@ export default function RegisterPage() {
                       Free Registration Confirmed!
                     </h3>
                     <p className="text-gray-600 text-sm max-w-md mx-auto mt-1">
-                      Your entry badge for Worship Camp: September Edition is ready. Save or screenshot this badge for quick scan at Maisha Gardens.
+                      Your entry badge for Worship Camp: December Edition is ready. Save or screenshot this badge for quick scan at Maisha Gardens.
                     </p>
                   </div>
 
@@ -357,7 +357,7 @@ export default function RegisterPage() {
                           className="h-9 w-auto object-contain drop-shadow"
                         />
                         <div>
-                          <span className="text-[10px] uppercase font-bold tracking-widest text-[#d4af37] block">September Edition</span>
+                          <span className="text-[10px] uppercase font-bold tracking-widest text-[#d4af37] block">December Edition</span>
                           <span className="font-display font-bold text-lg text-white">Worship Camp 2026</span>
                         </div>
                       </div>
@@ -377,7 +377,7 @@ export default function RegisterPage() {
                       <div className="grid grid-cols-2 gap-4 text-xs">
                         <div>
                           <span className="text-[10px] uppercase tracking-widest text-blue-200/70 block">Date & Time</span>
-                          <p className="font-semibold text-white">1st Sept 2026 • 4PM EAT</p>
+                          <p className="font-semibold text-white">1st Dec 2026 • 4PM EAT</p>
                         </div>
                         <div>
                           <span className="text-[10px] uppercase tracking-widest text-blue-200/70 block">Venue</span>
@@ -408,7 +408,7 @@ export default function RegisterPage() {
                   {/* Action Buttons */}
                   <div className="flex flex-wrap justify-center gap-4 pt-4">
                     <button
-                      onClick={() => alert(`Digital badge saved! A confirmation note was logged for ${formData.email}. See you at Maisha Gardens on 1st September 2026!`)}
+                      onClick={() => alert(`Digital badge saved! A confirmation note was logged for ${formData.email}. See you at Maisha Gardens on 1st December 2026!`)}
                       className="bg-gradient-to-r from-[#d4af37] via-[#f7e49e] to-[#c59b27] hover:from-[#e5c158] hover:via-[#fcf0b8] hover:to-[#d4af37] text-[#00133a] font-black px-6 py-3.5 rounded-full text-xs uppercase tracking-wider flex items-center gap-2 shadow-md shadow-[#d4af37]/20 cursor-pointer"
                     >
                       <Download className="w-4 h-4" />
@@ -475,7 +475,7 @@ export default function RegisterPage() {
                 <div className="relative w-full h-[640px] bg-[#f8faff]">
                   <iframe
                     src={GOOGLE_FORM_EMBED_URL}
-                    title="Worship Camp September Edition Free Registration Google Form"
+                    title="Worship Camp December Edition Free Registration Google Form"
                     className="w-full h-full border-0"
                     loading="lazy"
                   >
@@ -510,7 +510,7 @@ export default function RegisterPage() {
           <div className="space-y-4 text-xs text-gray-600">
             <div className="p-4 rounded-2xl bg-[#f8faff] border border-gray-100">
               <strong className="text-gray-900 block text-sm mb-1">Is Worship Camp completely free?</strong>
-              <p>Yes! Admission to Worship Camp: September Edition is 100% free. All sessions, praise encounters, and teachings at Maisha Gardens require zero fees.</p>
+              <p>Yes! Admission to Worship Camp: December Edition is 100% free. All sessions, praise encounters, and teachings at Maisha Gardens require zero fees.</p>
             </div>
             <div className="p-4 rounded-2xl bg-[#f8faff] border border-gray-100">
               <strong className="text-gray-900 block text-sm mb-1">Why should I register through Google Forms?</strong>

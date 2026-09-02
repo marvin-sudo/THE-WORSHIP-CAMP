@@ -64,7 +64,7 @@ export default function LocationModal({ isOpen, onClose }: LocationModalProps) {
               </div>
               <div className="bg-white/95 text-[#002366] px-4 py-2 rounded-xl shadow-lg mt-3 text-xs font-bold border border-[#d4af37]/30">
                 <p className="font-display font-bold">{EVENT_INFO.locationName}</p>
-                <p className="text-[10px] text-gray-500 font-mono">Maisha Gardens • Nairobi, East Africa</p>
+                <p className="text-[10px] text-gray-500 font-mono">Maisha Gardens • Nakuwadde</p>
               </div>
             </div>
 
@@ -116,7 +116,7 @@ export default function LocationModal({ isOpen, onClose }: LocationModalProps) {
                 <Plane className="w-4 h-4" />
               </div>
               <h5 className="font-bold text-[#002366] text-sm mb-1">Regional Arrivals</h5>
-              <p className="text-xs text-gray-600">For out-of-town worshippers, Maisha Gardens is centrally reachable from major Nairobi transport hubs.</p>
+              <p className="text-xs text-gray-600">For out-of-town worshippers, Maisha Gardens in Nakuwadde is easily reachable via main transit routes and highways.</p>
             </div>
           </div>
 

@@ -110,24 +110,24 @@ export default function SchedulePage() {
   });
 
   const generateGoogleCalendarUrl = () => {
-    const title = encodeURIComponent("Worship Camp: September Edition");
-    const details = encodeURIComponent("Join us for Worship Camp September Edition at Maisha Gardens starting 4:00 PM EAT. Bring your Bible, journal, and warm attire.");
+    const title = encodeURIComponent("Worship Camp: December Edition");
+    const details = encodeURIComponent("Join us for Worship Camp December Edition at Maisha Gardens starting 4:00 PM EAT. Bring your Bible, journal, and warm attire.");
     const location = encodeURIComponent(EVENT_INFO.locationAddress);
-    const dates = "20260901T130000Z/20260901T200000Z";
+    const dates = "20261201T130000Z/20261201T200000Z";
     return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${dates}&details=${details}&location=${location}`;
   };
 
   const handleDownloadProgram = () => {
-    alert("Worship Camp 2026: September Edition Schedule (PDF format) will download to your device.");
+    alert("Worship Camp 2026: December Edition Schedule (PDF format) will download to your device.");
   };
 
   return (
     <div className="bg-[#f8faff] min-h-screen">
       {/* 1. Page Header */}
       <PageHeader 
-        badge="September Edition Flow"
+        badge="December Edition Flow"
         title="Event Program & Schedule"
-        subtitle="Tuesday, 1st September 2026 • Maisha Gardens • Gates Open 3:00 PM • Main Session Starts 4:00 PM EAT"
+        subtitle="Tuesday, 1st December 2026 • Maisha Gardens • Gates Open 3:00 PM • Main Session Starts 4:00 PM EAT"
         breadcrumb="Schedule"
       />
 

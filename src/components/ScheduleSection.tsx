@@ -34,7 +34,7 @@ export default function ScheduleSection({ onRegisterClick }: { onRegisterClick: 
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-[#d4af37] font-bold tracking-[0.2em] uppercase text-sm mb-3 block">
-            September Edition Program • 1st Sept 2026
+            December Edition Program • 1st Dec 2026
           </span>
           <h2 className="text-4xl md:text-5xl font-display font-bold text-[#002366] mb-6">
             Event Schedule & Flow

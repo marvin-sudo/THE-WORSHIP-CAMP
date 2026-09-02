@@ -93,8 +93,8 @@ export default function ContactFAQPage() {
             <div>
               <h4 className="font-display font-bold text-[#002366]">Helpline & WhatsApp</h4>
               <p className="text-xs text-gray-500 mt-1 mb-2">Live attendee support on event day.</p>
-              <a href="tel:+254700000000" className="text-xs font-bold text-[#002366] hover:underline">
-                +254 700 000 000
+              <a href="tel:+256700000000" className="text-xs font-bold text-[#002366] hover:underline">
+                +256 700 000 000
               </a>
             </div>
           </div>
@@ -106,7 +106,7 @@ export default function ContactFAQPage() {
             <div>
               <h4 className="font-display font-bold text-[#002366]">Event Grounds</h4>
               <p className="text-xs text-gray-500 mt-1 mb-2">{EVENT_INFO.locationAddress}</p>
-              <span className="text-[11px] font-bold text-gray-400">1st September 2026 @ 4PM</span>
+              <span className="text-[11px] font-bold text-gray-400">1st December 2026 @ 4PM</span>
             </div>
           </div>
         </div>

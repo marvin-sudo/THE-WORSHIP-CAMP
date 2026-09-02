@@ -19,7 +19,7 @@ export default function VenuePage() {
       <PageHeader 
         badge="Venue & Map Guide"
         title="Maisha Gardens"
-        subtitle="The sacred garden setting for Worship Camp September Edition. Discover parking, grounds layout, and travel directions."
+        subtitle="The sacred garden setting for Worship Camp December Edition. Discover parking, grounds layout, and travel directions."
         breadcrumb="Venue & Map"
       />
 
@@ -81,7 +81,7 @@ export default function VenuePage() {
                 <h4 className="text-xl font-display font-bold text-[#002366]">Gathering Specs</h4>
               </div>
               <span className="bg-[#002366] text-[#f3e5ab] text-xs font-extrabold px-3 py-1 rounded-full">
-                1st Sept 2026
+                1st Dec 2026
               </span>
             </div>
 
@@ -210,13 +210,13 @@ export default function VenuePage() {
             {activeTransportTab === 'transit' && (
               <div className="space-y-4">
                 <h4 className="text-lg font-bold text-[#002366] flex items-center gap-2">
-                  <Plane className="w-5 h-5 text-[#d4af37]" /> Out-of-Town & International Attendees
+                  <Plane className="w-5 h-5 text-[#d4af37]" /> Out-of-Town & Regional Attendees
                 </h4>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Worshippers flying into Jomo Kenyatta International Airport (JKIA) or Wilson Airport can easily book an authorized airport taxi or Uber straight to Maisha Gardens (approx. 30–45 mins depending on flight arrival).
+                  Worshippers traveling in from other towns or abroad can easily take an authorized taxi, rideshare, or shuttle straight to Maisha Gardens in Nakuwadde.
                 </p>
                 <div className="p-4 bg-white rounded-2xl border border-gray-200 text-xs text-gray-700">
-                  🏨 Nearby guest houses and partner hotels with special attendee rates are available upon request.
+                  🏨 Nearby guest houses and partner accommodations with special attendee rates are available upon request.
                 </div>
               </div>
             )}
