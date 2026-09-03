@@ -6,6 +6,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { Cross, Flame, Hand, Users, Heart, ArrowRight } from 'lucide-react';
+import { IMAGES } from '../constants';
 
 interface AboutProps {
   onRegisterClick: () => void;
@@ -112,8 +113,8 @@ export default function About({ onRegisterClick }: AboutProps) {
             {/* Primary Featured Image */}
             <div className="aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl relative z-10 border-4 border-white">
               <img 
-                src="https://images.unsplash.com/photo-1544427928-c49cdfebf494?auto=format&fit=crop&q=80&w=1000"
-                alt="Worship Camp Atmosphere"
+                src={IMAGES.about}
+                alt="About Worship Camp"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />

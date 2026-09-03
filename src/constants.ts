@@ -375,7 +375,8 @@ export const GALLERY_ITEMS = [
 export const IMAGES = {
   logo: LOGO_URL,
   hero: "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&q=80&w=1920",
-  atmosphere: "https://images.unsplash.com/photo-1544427928-c49cdfebf494?auto=format&fit=crop&q=80&w=1000",
+  atmosphere: "https://www.image2url.com/r2/default/images/1788426971319-beb3b0f2-d1f8-4524-a671-42021e45100c.png",
+  about: "https://www.image2url.com/r2/default/images/1788426971319-beb3b0f2-d1f8-4524-a671-42021e45100c.png",
 };
 
 export const FAQS = [
