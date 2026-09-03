@@ -5,7 +5,7 @@
 
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { Sparkles, Heart, Mic, ArrowRight } from 'lucide-react';
+import { Heart, Mic, ArrowRight } from 'lucide-react';
 import { SPEAKERS } from '../constants';
 
 export default function SpeakersSection() {

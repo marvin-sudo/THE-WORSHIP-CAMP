@@ -6,7 +6,7 @@
 import { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, Sparkles, Cross, Calendar, MapPin } from 'lucide-react';
+import { Menu, X, Cross, Calendar, MapPin } from 'lucide-react';
 import { NAV_LINKS, EVENT_INFO, LOGO_URL } from '../constants';
 
 interface NavbarProps {

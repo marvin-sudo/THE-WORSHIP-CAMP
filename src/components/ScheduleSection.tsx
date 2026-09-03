@@ -6,7 +6,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
-import { Calendar, Clock, MapPin, Sparkles, ChevronRight, Music, Flame, Cross, BookOpen, ArrowRight } from 'lucide-react';
+import { Calendar, Clock, MapPin, ChevronRight, Music, Flame, Cross, BookOpen, ArrowRight } from 'lucide-react';
 import { SCHEDULE_DAYS } from '../constants';
 
 export default function ScheduleSection({ onRegisterClick }: { onRegisterClick: () => void }) {
@@ -34,8 +34,7 @@ export default function ScheduleSection({ onRegisterClick }: { onRegisterClick: 
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-12">
           {/* Editions Journey Badge */}
-          <div className="inline-flex items-center gap-2 bg-[#d4af37]/15 px-4 py-1.5 rounded-full border border-[#d4af37]/30 mb-4">
-            <Sparkles className="w-3.5 h-3.5 text-[#002366]" />
+          <div className="inline-block bg-[#d4af37]/15 px-4 py-1.5 rounded-full border border-[#d4af37]/30 mb-4">
             <span className="text-[#002366] text-xs font-extrabold uppercase tracking-widest">
               Edition 1 (September) • Edition 2 (1st December 2026)
             </span>

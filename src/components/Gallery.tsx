@@ -5,7 +5,7 @@
 
 import { useState } from 'react';
 import { motion } from 'motion/react';
-import { Sparkles, Maximize2, Tag } from 'lucide-react';
+import { Maximize2, Tag } from 'lucide-react';
 import { GALLERY_ITEMS } from '../constants';
 
 interface GalleryProps {
@@ -28,8 +28,8 @@ export default function Gallery({ onPhotoClick }: GalleryProps) {
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-8">
           <div className="max-w-2xl">
-            <span className="text-[#002366] font-bold tracking-[0.25em] uppercase text-xs sm:text-sm mb-3 inline-flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-[#d4af37]" /> Visual Atmosphere
+            <span className="text-[#002366] font-bold tracking-[0.25em] uppercase text-xs sm:text-sm mb-3 inline-block">
+              Visual Atmosphere
             </span>
             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-display font-extrabold text-[#002366] leading-tight">
               The Worship Camp Experience

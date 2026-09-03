@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { Cross, Flame, Hand, Users, Music, MapPin, Calendar, Clock, Star, Sparkles, Heart, Shield, Award } from 'lucide-react';
+import { Cross, Flame, Hand, Users, Music, MapPin, Calendar, Clock, Heart, Shield, Award } from 'lucide-react';
 
 export const LOGO_URL = "https://www.image2url.com/r2/default/images/1787509985137-5e184dc6-06b6-46f1-a451-5348e3eeac10.png";
 export const FOOTER_LOGO_URL = "https://www.image2url.com/r2/default/images/1787510163564-c708282a-9e66-48c4-b7e8-ea3961e4995b.png";
@@ -65,7 +65,7 @@ export const FEATURES = [
   {
     title: 'Youth Empowerment',
     description: 'Hands-on creative and leadership workshops tailored to activate your God-given calling in society.',
-    Icon: Sparkles,
+    Icon: Award,
     tag: 'Leadership',
   },
 ];

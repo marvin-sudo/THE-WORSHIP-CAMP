@@ -14,7 +14,7 @@ import Gallery from '../components/Gallery';
 import Testimonials from '../components/Testimonials';
 import CTA from '../components/CTA';
 import FAQSection from '../components/FAQSection';
-import { ArrowRight, Sparkles, MapPin, Calendar, Clock } from 'lucide-react';
+import { ArrowRight, MapPin, Calendar, Clock } from 'lucide-react';
 import { EVENT_INFO } from '../constants';
 
 interface HomePageProps {

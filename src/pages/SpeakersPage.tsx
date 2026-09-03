@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import PageHeader from '../components/PageHeader';
 import { SPEAKERS } from '../constants';
-import { BookOpen, Sparkles, Music, Flame, ArrowRight, Instagram, Twitter, Cross, Heart, CheckCircle2 } from 'lucide-react';
+import { BookOpen, Users, Music, Flame, ArrowRight, Instagram, Twitter, Cross, Heart, CheckCircle2 } from 'lucide-react';
 
 export default function SpeakersPage() {
   const [selectedRole, setSelectedRole] = useState<string>("All");
@@ -98,8 +98,7 @@ export default function SpeakersPage() {
 
                 {/* Session & Scripture Spotlight */}
                 <div className="p-4 bg-[#f8faff] rounded-2xl border border-blue-50 space-y-2">
-                  <div className="flex items-center gap-2 text-xs font-bold text-[#002366]">
-                    <Sparkles className="w-4 h-4 text-[#d4af37]" />
+                  <div className="text-xs font-bold text-[#002366]">
                     <span>Session Topic:</span>
                   </div>
                   <p className="text-sm font-bold text-[#002366] leading-snug">
@@ -171,7 +170,7 @@ export default function SpeakersPage() {
 
             <div className="p-6 rounded-3xl bg-[#f8faff] border border-blue-50 text-center space-y-3">
               <div className="w-12 h-12 rounded-2xl bg-[#002366] text-[#f3e5ab] flex items-center justify-center mx-auto shadow-md">
-                <Sparkles className="w-6 h-6" />
+                <Users className="w-6 h-6" />
               </div>
               <h4 className="font-display font-bold text-lg text-[#002366]">Campus Revival Musicians</h4>
               <p className="text-xs text-gray-500">Anointed student strings, brass, and percussionists across university teams.</p>

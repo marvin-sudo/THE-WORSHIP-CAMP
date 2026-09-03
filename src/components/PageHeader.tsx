@@ -5,7 +5,7 @@
 
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { Sparkles, ChevronRight } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 
 interface PageHeaderProps {
   badge: string;
@@ -33,8 +33,7 @@ export default function PageHeader({ badge, title, subtitle, breadcrumb }: PageH
 
         {/* Badge */}
         <div className="mb-4">
-          <span className="inline-flex items-center gap-1.5 bg-[#d4af37]/20 border border-[#d4af37]/40 text-[#f3e5ab] text-xs font-extrabold uppercase tracking-[0.2em] px-4 py-1 rounded-full">
-            <Sparkles className="w-3.5 h-3.5 text-[#d4af37]" />
+          <span className="inline-block bg-[#d4af37]/20 border border-[#d4af37]/40 text-[#f3e5ab] text-xs font-extrabold uppercase tracking-[0.2em] px-4 py-1 rounded-full">
             {badge}
           </span>
         </div>

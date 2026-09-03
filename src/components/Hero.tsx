@@ -6,7 +6,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { ArrowRight, Volume2, VolumeX, Sparkles, Cross, Shield, Calendar, MapPin } from 'lucide-react';
+import { ArrowRight, Volume2, VolumeX, Cross, Shield, Calendar, MapPin } from 'lucide-react';
 import { IMAGES, TYPING_PHRASES, EVENT_INFO, HERO_VIDEO_URL } from '../constants';
 import { worshipAudio } from '../utils/audioPad';
 
@@ -211,7 +211,6 @@ export default function Hero({ onRegisterClick }: HeroProps) {
 
             {/* Dynamic Typing Text Banner */}
             <div className="pt-4 border-t border-white/10 flex items-center gap-2.5 sm:gap-3">
-              <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-[#d4af37] shrink-0" />
               <div className="min-h-[26px] flex items-center">
                 <span className="text-[#f3e5ab] font-mono text-xs sm:text-sm md:text-base tracking-wider font-medium">
                   {displayText}

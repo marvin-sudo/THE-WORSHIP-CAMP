@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import PageHeader from '../components/PageHeader';
 import { EVENT_INFO, EDITIONS } from '../constants';
-import { Clock, Calendar, MapPin, Sparkles, Filter, Download, ArrowRight, Music, Flame, BookOpen, Users, CheckCircle, History, Check } from 'lucide-react';
+import { Clock, Calendar, MapPin, Filter, Download, ArrowRight, Music, Flame, BookOpen, Users, CheckCircle, History, Check } from 'lucide-react';
 
 const DETAILED_SESSIONS = [
   {
@@ -202,8 +202,7 @@ export default function SchedulePage() {
                   </div>
 
                   {isUpcoming && isSelected && (
-                    <div className="mt-4 pt-3 flex items-center gap-2 text-xs font-bold text-[#f3e5ab]">
-                      <Sparkles className="w-3.5 h-3.5 text-[#d4af37]" />
+                    <div className="mt-4 pt-3 text-xs font-bold text-[#f3e5ab]">
                       <span>Viewing Detailed Program Below</span>
                     </div>
                   )}
@@ -331,8 +330,7 @@ export default function SchedulePage() {
                   
                   {/* Time & Session Badge Column */}
                   <div className="lg:col-span-3 space-y-2">
-                    <div className="inline-flex items-center gap-1.5 bg-[#002366]/5 text-[#002366] text-[11px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full">
-                      <Sparkles className="w-3 h-3 text-[#d4af37]" />
+                    <div className="inline-block bg-[#002366]/5 text-[#002366] text-[11px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full">
                       {session.sessionBlock} • {session.sessionLabel}
                     </div>
                     

@@ -4,7 +4,7 @@
  */
 
 import { motion } from 'motion/react';
-import { Sparkles, ArrowRight, Check } from 'lucide-react';
+import { Flame, ArrowRight, Check } from 'lucide-react';
 import { FEATURES } from '../constants';
 
 interface ExpectationsProps {
@@ -96,7 +96,7 @@ export default function Expectations({ onRegisterClick }: ExpectationsProps) {
         <div className="mt-16 bg-white rounded-3xl p-8 border border-gray-100 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-2xl bg-[#002366] text-[#d4af37] flex items-center justify-center shrink-0">
-              <Sparkles className="w-6 h-6" />
+              <Flame className="w-6 h-6" />
             </div>
             <div>
               <h4 className="font-display font-bold text-[#002366] text-lg">Ready to experience the 3 pillars?</h4>

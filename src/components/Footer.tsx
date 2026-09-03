@@ -16,7 +16,6 @@ import {
   Cross, 
   Heart, 
   ArrowRight, 
-  Sparkles, 
   CheckCircle2, 
   Send,
   BookOpen,
@@ -100,8 +99,7 @@ export default function Footer({ onRegisterClick }: FooterProps) {
             
             {/* Left Content Column */}
             <div className="lg:col-span-6 text-left">
-              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/15 mb-4 shadow-sm">
-                <Sparkles className="w-3.5 h-3.5 text-[#d4af37]" />
+              <div className="inline-block bg-white/10 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/15 mb-4 shadow-sm">
                 <span 
                   className="text-[#f3e5ab] text-xs font-bold uppercase tracking-[0.2em]"
                   style={{ fontFamily: "'Outfit', sans-serif" }}

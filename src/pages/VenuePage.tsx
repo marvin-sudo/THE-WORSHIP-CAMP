@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import PageHeader from '../components/PageHeader';
 import { EVENT_INFO, VENUE_CHECKLIST } from '../constants';
-import { MapPin, Navigation, Car, Bus, Plane, Clock, ShieldCheck, Sun, Moon, CheckCircle2, XCircle, ExternalLink, ArrowRight, Sparkles, Phone, Mail } from 'lucide-react';
+import { MapPin, Navigation, Car, Bus, Plane, Clock, ShieldCheck, Sun, Moon, CheckCircle2, XCircle, ExternalLink, ArrowRight, Phone, Mail } from 'lucide-react';
 
 export default function VenuePage() {
   const [activeTransportTab, setActiveTransportTab] = useState<'car' | 'transit' | 'group'>('car');

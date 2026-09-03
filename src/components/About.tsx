@@ -5,7 +5,7 @@
 
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { Cross, Flame, Hand, Users, Sparkles, Heart, ArrowRight } from 'lucide-react';
+import { Cross, Flame, Hand, Users, Heart, ArrowRight } from 'lucide-react';
 
 interface AboutProps {
   onRegisterClick: () => void;
@@ -28,8 +28,8 @@ export default function About({ onRegisterClick }: AboutProps) {
             transition={{ duration: 0.8 }}
             className="lg:col-span-6"
           >
-            <span className="text-[#002366] font-bold tracking-[0.25em] uppercase text-xs sm:text-sm mb-4 inline-flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-[#d4af37]" /> About Worship Camp
+            <span className="text-[#002366] font-bold tracking-[0.25em] uppercase text-xs sm:text-sm mb-4 inline-block">
+              About Worship Camp
             </span>
             
             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-display font-extrabold text-[#002366] mb-8 leading-[1.15] tracking-tight">

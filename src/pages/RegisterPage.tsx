@@ -7,7 +7,7 @@ import { useState, type ChangeEvent, type FormEvent } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import PageHeader from '../components/PageHeader';
 import { GOOGLE_FORM_URL, GOOGLE_FORM_EMBED_URL, FREE_EVENT_HIGHLIGHTS, EVENT_INFO, LOGO_URL } from '../constants';
-import { Sparkles, CheckCircle2, QrCode, Download, Calendar, MapPin, Clock, ArrowRight, ShieldCheck, Users, Mail, Phone, User, Building, ExternalLink, FileText, Check } from 'lucide-react';
+import { CheckCircle2, QrCode, Download, Calendar, MapPin, Clock, ArrowRight, ShieldCheck, Users, Mail, Phone, User, Building, ExternalLink, FileText, Check } from 'lucide-react';
 
 export default function RegisterPage() {
   const [activeTab, setActiveTab] = useState<'instant' | 'google-form'>('instant');

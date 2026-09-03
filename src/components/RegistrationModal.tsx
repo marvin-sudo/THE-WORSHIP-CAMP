@@ -6,7 +6,7 @@
 import { useState } from 'react';
 import type { FormEvent } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, Check, Sparkles, ArrowRight, ShieldCheck, Download, Calendar, MapPin, User, Mail, Phone, Church, ExternalLink, FileText, QrCode } from 'lucide-react';
+import { X, Check, ArrowRight, ShieldCheck, Download, Calendar, MapPin, User, Mail, Phone, Church, ExternalLink, FileText, QrCode } from 'lucide-react';
 import { GOOGLE_FORM_URL, GOOGLE_FORM_EMBED_URL, EVENT_INFO, LOGO_URL } from '../constants';
 
 interface RegistrationModalProps {
@@ -67,8 +67,8 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
           
           <div className="flex justify-between items-start relative z-10">
             <div>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black tracking-widest uppercase bg-gradient-to-r from-[#d4af37] via-[#f7e49e] to-[#c59b27] text-[#00133a] mb-2 shadow-sm">
-                <Sparkles className="w-3.5 h-3.5" /> 100% FREE ADMISSION
+              <span className="inline-block px-3 py-1 rounded-full text-xs font-black tracking-widest uppercase bg-gradient-to-r from-[#d4af37] via-[#f7e49e] to-[#c59b27] text-[#00133a] mb-2 shadow-sm">
+                100% FREE ADMISSION
               </span>
               <h3 className="text-2xl md:text-3xl font-display font-bold text-white">
                 {isConfirmed ? 'Registration Confirmed!' : 'December Edition Registration'}

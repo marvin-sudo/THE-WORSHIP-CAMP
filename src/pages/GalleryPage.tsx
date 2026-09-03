@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import PageHeader from '../components/PageHeader';
 import { GALLERY_ITEMS } from '../constants';
-import { Sparkles, Maximize2, ArrowRight, Volume2, VolumeX, Heart, Camera } from 'lucide-react';
+import { Maximize2, ArrowRight, Volume2, VolumeX, Heart, Camera } from 'lucide-react';
 
 interface GalleryPageProps {
   onPhotoClick: (id: number) => void;

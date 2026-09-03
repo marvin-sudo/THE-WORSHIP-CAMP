@@ -7,7 +7,7 @@ import { useState, type FormEvent } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import PageHeader from '../components/PageHeader';
 import { FAQS, EVENT_INFO } from '../constants';
-import { ChevronDown, Mail, Phone, MapPin, Send, MessageSquare, HelpCircle, CheckCircle2, HeartHandshake, Sparkles } from 'lucide-react';
+import { ChevronDown, Mail, Phone, MapPin, Send, MessageSquare, HelpCircle, CheckCircle2, HeartHandshake } from 'lucide-react';
 
 const EXPANDED_FAQS = [
   ...FAQS,

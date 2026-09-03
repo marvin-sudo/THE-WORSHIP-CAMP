@@ -5,7 +5,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
-import { Calendar, Clock, MapPin, Sparkles, ArrowRight, Bell, Share2, Check } from 'lucide-react';
+import { Calendar, Clock, MapPin, ArrowRight, Bell, Share2, Check } from 'lucide-react';
 import { EVENT_INFO } from '../constants';
 
 interface CountdownTimerProps {
@@ -151,8 +151,7 @@ export default function CountdownTimer({
         
         {/* Header Badge & Title */}
         <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/15 mb-4 shadow-sm">
-            <Sparkles className="w-3.5 h-3.5 text-[#d4af37]" />
+          <div className="inline-block bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/15 mb-4 shadow-sm">
             <span className="text-[#f3e5ab] text-xs font-extrabold uppercase tracking-[0.2em]">
               COUNTDOWN TO THE GATHERING
             </span>

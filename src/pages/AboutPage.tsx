@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import PageHeader from '../components/PageHeader';
 import { CORE_PILLARS, EVENT_INFO } from '../constants';
-import { Flame, Cross, Sparkles, Heart, Shield, Award, Users, BookOpen, ArrowRight, CheckCircle2, MapPin, Calendar } from 'lucide-react';
+import { Flame, Cross, Heart, Shield, Award, Users, BookOpen, ArrowRight, CheckCircle2, MapPin, Calendar } from 'lucide-react';
 
 interface AboutPageProps {
   onRegisterClick: () => void;
@@ -82,8 +82,8 @@ export default function AboutPage({ onRegisterClick }: AboutPageProps) {
                 className="w-full h-80 object-cover"
               />
               <div className="p-6 bg-[#00173d] text-white">
-                <div className="flex items-center gap-2 text-[#d4af37] text-xs font-extrabold uppercase tracking-widest mb-2">
-                  <Sparkles className="w-4 h-4" /> December Edition @ Maisha Gardens
+                <div className="text-[#d4af37] text-xs font-extrabold uppercase tracking-widest mb-2">
+                  December Edition @ Maisha Gardens
                 </div>
                 <h3 className="font-display font-bold text-xl mb-2">
                   Open-Air Garden Sanctuary

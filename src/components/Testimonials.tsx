@@ -6,9 +6,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
-  Star, 
   Quote, 
-  Sparkles, 
   ChevronLeft, 
   ChevronRight, 
   Pause, 
@@ -103,8 +101,7 @@ export default function Testimonials() {
         
         {/* Section Header with 'Outfit' Font */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 bg-[#d4af37]/15 backdrop-blur-sm px-4 py-1.5 rounded-full border border-[#d4af37]/30 mb-4 shadow-sm">
-            <Sparkles className="w-4 h-4 text-[#d4af37]" />
+          <div className="inline-block bg-[#d4af37]/15 backdrop-blur-sm px-4 py-1.5 rounded-full border border-[#d4af37]/30 mb-4 shadow-sm">
             <span 
               className="text-[#002366] font-bold tracking-[0.2em] uppercase text-xs"
               style={{ fontFamily: "'Outfit', sans-serif" }}
@@ -189,16 +186,13 @@ export default function Testimonials() {
                             </span>
                           </div>
 
-                          {/* 5 Stars Rating */}
-                          <div className="flex gap-1 items-center bg-[#fdfaf0] px-3 py-1 rounded-full border border-[#f3e5ab]">
-                            {[...Array(currentItem.rating)].map((_, starIdx) => (
-                              <Star key={starIdx} className="w-3.5 h-3.5 text-[#d4af37]" fill="#d4af37" />
-                            ))}
+                          {/* Rating Badge */}
+                          <div className="flex items-center bg-[#fdfaf0] px-3 py-1 rounded-full border border-[#f3e5ab]">
                             <span 
-                              className="text-[11px] font-bold text-[#b89628] ml-1"
+                              className="text-[11px] font-bold text-[#b89628]"
                               style={{ fontFamily: "'Outfit', sans-serif" }}
                             >
-                              5.0
+                              5.0 Rating
                             </span>
                           </div>
                         </div>

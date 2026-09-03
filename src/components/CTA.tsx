@@ -4,7 +4,7 @@
  */
 
 import { motion } from 'motion/react';
-import { ArrowRight, Sparkles, ShieldCheck, Users } from 'lucide-react';
+import { ArrowRight, ShieldCheck, Users } from 'lucide-react';
 
 interface CTAProps {
   onRegisterClick: () => void;
@@ -24,8 +24,8 @@ export default function CTA({ onRegisterClick }: CTAProps) {
         <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-blue-400 rounded-full blur-[160px] opacity-15 pointer-events-none" />
 
         <div className="relative z-10 max-w-4xl mx-auto">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-[#f3e5ab] text-xs font-bold uppercase tracking-widest mb-6 border border-white/15">
-            <Sparkles className="w-3.5 h-3.5 text-[#d4af37]" /> EDITION 2 (DECEMBER 2026) REGISTRATION IS OPEN
+          <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 text-[#f3e5ab] text-xs font-bold uppercase tracking-widest mb-6 border border-white/15">
+            EDITION 2 (DECEMBER 2026) REGISTRATION IS OPEN
           </span>
 
           <h2 className="text-3xl sm:text-5xl md:text-7xl font-display font-extrabold text-white mb-6 leading-tight tracking-tight">

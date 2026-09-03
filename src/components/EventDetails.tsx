@@ -5,7 +5,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
-import { Calendar, MapPin, Clock, ArrowRight, ShieldCheck, Sparkles, Navigation } from 'lucide-react';
+import { Calendar, MapPin, Clock, ArrowRight, ShieldCheck, Navigation } from 'lucide-react';
 import { EVENT_INFO } from '../constants';
 
 interface EventDetailsProps {
@@ -62,8 +62,8 @@ export default function EventDetails({ onOpenMap, onRegisterClick }: EventDetail
             
             {/* Left Column: Event Specs */}
             <div className="lg:col-span-7">
-              <span className="text-[#f3e5ab] font-bold tracking-[0.2em] uppercase text-xs mb-3 sm:mb-4 inline-flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-[#d4af37]" /> DECEMBER EDITION • SAVE THE DATE
+              <span className="text-[#f3e5ab] font-bold tracking-[0.2em] uppercase text-xs mb-3 sm:mb-4 inline-block">
+                DECEMBER EDITION • SAVE THE DATE
               </span>
               
               <h2 className="text-2xl sm:text-4xl lg:text-5xl font-display font-bold text-white mb-6 sm:mb-8 leading-tight">
